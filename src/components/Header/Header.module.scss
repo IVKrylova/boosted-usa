@@ -1,0 +1,85 @@
+@import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
+
+.header {
+  display: grid;
+  grid-template-areas:
+    'message message message'
+    'logo navMenu account';
+  @include width($width-pages);
+
+  .header__message {
+    grid-area: message;
+    background-color: #000;
+    color: #fbfbfb;
+    @include width($width-pages);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #FBFBFB;
+    margin: 0 auto;
+    padding: 7px 0;
+    box-sizing: border-box;
+  }
+
+  .header__logo {
+    grid-area: logo;
+    justify-self: start;
+    width: 160px;
+    height: 36px;
+    display: block;
+    margin: 15px 0 15px 11px;
+  }
+
+  .navMenu {
+    grid-area: navMenu;
+    align-self: center;
+
+    .navMenu__list {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      text-transform: uppercase;
+      column-gap: 25px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      margin: 0;
+
+      .navMenu__item {
+        .navMenu__link {
+          color: $fontColorDark;
+          text-decoration: none;
+        }
+
+        .navMenu__link:hover {
+          cursor: pointer;
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  .account {
+    grid-area: account;
+    align-self: center;
+    margin: 0 20px 0 0;
+    justify-self: end;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    column-gap: 10px;
+
+    .account__link {
+      text-decoration: none;
+    }
+
+    .account__link:hover {
+      cursor: pointer;
+      opacity: .5;
+    }
+  }
+}
