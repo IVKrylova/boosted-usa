@@ -6,13 +6,13 @@
   grid-template-areas:
     'message message message'
     'logo navMenu account';
-  @include width($width-pages);
+  @include width($widthPages);
 
   .header__message {
     grid-area: message;
     background-color: #000;
     color: #fbfbfb;
-    @include width($width-pages);
+    @include width($widthPages);
     font-weight: 400;
     font-size: 12px;
     line-height: 1.25;
@@ -56,8 +56,7 @@
         }
 
         .navMenu__link:hover {
-          cursor: pointer;
-          opacity: .5;
+          @include hover;
         }
       }
     }

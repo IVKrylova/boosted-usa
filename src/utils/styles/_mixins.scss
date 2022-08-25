@@ -2,3 +2,8 @@
   width: 100%;
   max-width: $width;
 }
+
+@mixin hover {
+  cursor: pointer;
+  opacity: .7;
+}

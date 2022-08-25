@@ -1,0 +1,43 @@
+@import '../../utils/styles/mixins';
+@import '../../utils/styles/constants';
+
+.banner {
+  background-image: url(../../images/banner-under-header.png);
+  @include width($widthPages);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .banner__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.15;
+    text-align: center;
+    color: $fontColorDark;
+    margin: 53px auto 0;
+    width: 100%;
+  }
+
+  .banner__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $fontColorDark;
+    max-width: 537px;
+    margin: 14px auto 0;
+  }
+
+  .banner__buttonsList {
+    padding: 0;
+    margin: 22px auto 618px;
+    list-style-type: none;
+    display: flex;
+    column-gap: 12px;
+  }
+}
