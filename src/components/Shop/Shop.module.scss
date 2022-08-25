@@ -1,0 +1,24 @@
+.shop {
+  margin-top: 45px;
+  width: 100%;
+
+  .linksList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    .linksList__item_place_stealth {
+      background-image: url(../../images/shop-boosted-steslth.png);
+    }
+
+    .linksList__item_place_plus {
+      background-image: url(../../images/shop-boosted-plus.png);
+    }
+
+    .linksList__item_place_mini {
+      background-image: url(../../images/shop-boosted-mini.png);
+    }
+  }
+}

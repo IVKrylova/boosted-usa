@@ -1,0 +1,38 @@
+@import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
+
+.linksList__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .linksList__title {
+    width: 100%;
+    max-width: 241px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.2;
+    text-align: center;
+    color: $fontColorLight;
+    margin: 208px auto 0;
+  }
+
+  .linksList__link {
+    width: 100%;
+    max-width: 83px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    color: $fontColorLight;
+    text-decoration: none;
+    margin: 15px auto 203px;
+  }
+
+  .linksList__link:hover {
+    @include hover;
+  }
+}
