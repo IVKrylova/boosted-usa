@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Brands from '../Brands/Brands';
 import BoostedShop from '../BoostedShop/BoostedShop';
 import ElectricSkateboards from '../ElectricSkateboards/ElectricSkateboards';
+import BoostedRev from '../BoostedRev/BoostedRev';
 import styles from './Main.module.scss';
 
 const Main: React.FC = () => {
@@ -12,6 +13,7 @@ const Main: React.FC = () => {
       <Brands />
       <BoostedShop />
       <ElectricSkateboards />
+      <BoostedRev />
     </main>
   );
 }
