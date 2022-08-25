@@ -1,0 +1,50 @@
+@import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
+
+.electricSkateboards {
+  margin-top: 20px;
+  width: 100%;
+  background-image: url(../../images/electric-skateboards.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding-bottom: 505px;
+  box-sizing: border-box;
+
+  .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $fontColorDark;
+    padding: 0;
+  }
+
+  .text_place_top {
+    margin: 44px auto 0;
+    width: 100%;
+    max-width: 143px;
+  }
+
+  .text_place_bottom {
+    width: 100%;
+    max-width: 488px;
+    margin: 15px auto 20px;
+  }
+
+  .title {
+    width: 100%;
+    max-width: 420px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.12;
+    text-align: center;
+    color: $fontColorDark;
+    margin: 11px auto 0;
+  }
+}
