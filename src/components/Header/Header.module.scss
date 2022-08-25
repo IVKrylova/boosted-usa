@@ -10,7 +10,7 @@
 
   .header__message {
     grid-area: message;
-    background-color: #000;
+    background-color: $backgroundDark;
     color: #fbfbfb;
     @include width($widthPages);
     font-weight: 400;

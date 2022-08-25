@@ -1,0 +1,20 @@
+@import '../../utils/styles/constants';
+
+.brands {
+  background-color: $backgroundDark;
+
+  .brandsList {
+    padding: 0;
+    margin: 18px auto;
+    list-style-type: none;
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+
+    .brandsList__item {
+      .brandsList__brand {
+        width: 280px;
+      }
+    }
+  }
+}
