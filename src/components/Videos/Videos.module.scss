@@ -1,0 +1,19 @@
+.videos {
+  width: 100%;
+  margin-top: 55px;
+  padding: 0 10%;
+
+  .videosList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    column-gap: 20px;
+
+    .videosList__item {
+      .videosList__video {
+        border: none;
+      }
+    }
+  }
+}

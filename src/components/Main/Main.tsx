@@ -5,6 +5,7 @@ import BoostedShop from '../BoostedShop/BoostedShop';
 import ElectricSkateboards from '../ElectricSkateboards/ElectricSkateboards';
 import BoostedRev from '../BoostedRev/BoostedRev';
 import Shop from '../Shop/Shop';
+import Videos from '../Videos/Videos';
 import styles from './Main.module.scss';
 
 const Main: React.FC = () => {
@@ -16,6 +17,7 @@ const Main: React.FC = () => {
       <ElectricSkateboards />
       <BoostedRev />
       <Shop />
+      <Videos />
     </main>
   );
 }
