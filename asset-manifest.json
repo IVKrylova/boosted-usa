@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a17eb116.css",
+    "main.js": "/static/js/main.03cf323c.js",
+    "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
+    "static/media/boosted-revs.png": "/static/media/boosted-revs.605adc6e5b176db96cc1.png",
+    "static/media/electric-skateboards.png": "/static/media/electric-skateboards.2f90c3bbec4e3e9c58fd.png",
+    "static/media/banner-under-header.png": "/static/media/banner-under-header.125fc493a180e7df9ce9.png",
+    "static/media/boosted-boards.png": "/static/media/boosted-boards.f478e25687dbb1b5604d.png",
+    "static/media/shop-boosted-mini.png": "/static/media/shop-boosted-mini.e67f717847bd3f060e22.png",
+    "static/media/shop-boosted-steslth.png": "/static/media/shop-boosted-steslth.888583f1c01153caf71b.png",
+    "static/media/shop-boosted-plus.png": "/static/media/shop-boosted-plus.f137bf40556efcef075c.png",
+    "static/media/Robotobold.ttf": "/static/media/Robotobold.1ac02c026895c20df570.ttf",
+    "static/media/Roboto.ttf": "/static/media/Roboto.ecf539e1e3bc3e936f78.ttf",
+    "static/media/woman-on-rev.png": "/static/media/woman-on-rev.98697770201d07bb1e8d.png",
+    "static/media/speed-rev.png": "/static/media/speed-rev.879891e49d56b08b9f00.png",
+    "static/media/Robotobold.woff": "/static/media/Robotobold.1e0c22679977ac02c8f6.woff",
+    "static/media/Roboto.woff": "/static/media/Roboto.59d18e163bfcd0607572.woff",
+    "static/media/Robotobold.woff2": "/static/media/Robotobold.23c8ce07bd38f6723622.woff2",
+    "static/media/Roboto.woff2": "/static/media/Roboto.806e04d8241d87f99a68.woff2",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/header-logo.svg": "/static/media/header-logo.5e856336f6a024bfe93ecd989ad0ef19.svg",
+    "static/media/popular-mechanics.svg": "/static/media/popular-mechanics.39e669117ccb04b0b5e3b4a016b11a0d.svg",
+    "static/media/icon-cart.svg": "/static/media/icon-cart.49f0c50b57ab919f09105828c6ec242a.svg",
+    "static/media/techcruch.svg": "/static/media/techcruch.cc03e67a9ecd20113177d86ac7c3283e.svg",
+    "static/media/electrec.svg": "/static/media/electrec.8b363891468413d4e58951dbb3eab2e9.svg",
+    "static/media/wired.svg": "/static/media/wired.bba1750ebe0840a1c3b35e705aca09c8.svg",
+    "static/media/icon-user.svg": "/static/media/icon-user.9b09aa7226180f46d0b736f8d2f2b5d8.svg",
+    "static/media/boosted-shop-logo.svg": "/static/media/boosted-shop-logo.c2def4bae6527aff1550d039991b55f3.svg",
+    "index.html": "/index.html",
+    "main.a17eb116.css.map": "/static/css/main.a17eb116.css.map",
+    "main.03cf323c.js.map": "/static/js/main.03cf323c.js.map",
+    "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a17eb116.css",
+    "static/js/main.03cf323c.js"
+  ]
+}
