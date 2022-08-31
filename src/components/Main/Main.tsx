@@ -7,6 +7,7 @@ import BoostedRev from '../BoostedRev/BoostedRev';
 import Shop from '../Shop/Shop';
 import Videos from '../Videos/Videos';
 import styles from './Main.module.scss';
+import Accessories from '../Accessories/Accessories';
 
 const Main: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const Main: React.FC = () => {
       <BoostedRev />
       <Shop />
       <Videos />
+      <Accessories />
     </main>
   );
 }
