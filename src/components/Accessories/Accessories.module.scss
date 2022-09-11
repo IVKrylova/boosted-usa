@@ -15,5 +15,20 @@
     line-height: 1.12;
     text-align: center;
     color: $fontColorDark;
+    margin: 54px auto 0;
+  }
+
+  .title::after {
+    content: '';
+    box-sizing: border-box;
+    border-bottom: solid 2px #cfcfcf;
+    width: 70px;
+    display: block;
+    margin: 22px auto 0;
+  }
+
+  .accessories__list {
+    width: 100%;
+    max-width: 1440px;
   }
 }

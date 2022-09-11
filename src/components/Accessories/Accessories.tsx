@@ -1,9 +1,11 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
+import { accessoriesList } from '../../utils/data/accessories';
 import 'react-multi-carousel/lib/styles.css';
 import styles from './Accessories.module.scss';
 
 const Accessories: React.FC = () => {
+  // настройка слайдера
   const responsive = {
     desktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -24,11 +26,21 @@ const Accessories: React.FC = () => {
       <h2 className={styles.title}>
         Looking for Accessories?
       </h2>
-      <Carousel responsive={responsive}>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
+      <Carousel responsive={responsive} className={styles.accessories__list}>
+        {accessoriesList.map(item => {
+          return (
+            <div key={item.id} className={styles.accessory}>
+              <img alt={item.name} src={item.img} className={styles.accessory__img} />
+              <h3 className={styles.accessory__name}>{item.name}</h3>
+              <p className={styles.accessory__price}>
+                {`$${item.price}`} <span>{`$${item.otherPrice}`}</span>
+              </p>
+              <p className={`${styles.accessory__availability} ${item.availability ? '' : styles.accessory__availability_hidden}`}>
+                Sold out
+              </p>
+            </div>
+          );
+        })}
       </Carousel>
     </section>
   );
