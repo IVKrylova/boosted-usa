@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './Description.module.scss';
+import styles from './Advantages.module.scss';
 import logoGoFast from '../../images/adv-go-fast.svg';
 import logoGoFar from '../../images/adv-go-far.svg';
 import logoGoSafe from '../../images/adv-go-safe.svg';
 import logoBuiltToLast from '../../images/adv-built-to-last.svg';
 
-const Description: React.FC = () => {
+const Advantages: React.FC = () => {
   return (
     <section className={styles.advantages}>
       <ul className={styles.advantages__list}>
@@ -44,4 +44,4 @@ const Description: React.FC = () => {
   );
 }
 
-export default Description;
+export default Advantages;

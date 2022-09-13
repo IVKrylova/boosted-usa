@@ -8,7 +8,7 @@ import Shop from '../Shop/Shop';
 import Videos from '../Videos/Videos';
 import styles from './Main.module.scss';
 import Accessories from '../Accessories/Accessories';
-import Description from '../Description/Description';
+import Advantages from '../Advantages/Advantages';
 import AboutBoosted from '../AboutBoosted/AboutBoosted';
 
 const Main: React.FC = () => {
@@ -22,7 +22,7 @@ const Main: React.FC = () => {
       <Shop />
       <Videos />
       <Accessories />
-      <Description />
+      <Advantages />
       <AboutBoosted />
     </main>
   );
