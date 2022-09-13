@@ -26,16 +26,22 @@ const Accessories: React.FC = () => {
       <h2 className={styles.title}>
         Looking for Accessories?
       </h2>
-      <Carousel responsive={responsive} className={styles.accessories__list}>
+      <Carousel
+        responsive={responsive}
+        className={styles.accessories__list}
+        swipeable={false}
+        draggable={false}
+        showDots={false}
+      >
         {accessoriesList.map(item => {
           return (
             <div key={item.id} className={styles.accessory}>
               <img alt={item.name} src={item.img} className={styles.accessory__img} />
               <h3 className={styles.accessory__name}>{item.name}</h3>
-              <p className={styles.accessory__price}>
-                {`$${item.price}`} <span>{`$${item.otherPrice}`}</span>
+              <p className={`${styles.accessory__price} ${item.availability ? '' : styles.accessory__price_hidden}`}>
+                {`$${item.price}`} <span className={`${styles.accessory__otherPrice} ${item.otherPrice ? styles.accessory__otherPrice_visible : ''}`}>{`$${item.otherPrice}`}</span>
               </p>
-              <p className={`${styles.accessory__availability} ${item.availability ? '' : styles.accessory__availability_hidden}`}>
+              <p className={`${styles.accessory__availability} ${item.availability ? '' : styles.accessory__availability_visible}`}>
                 Sold out
               </p>
             </div>
