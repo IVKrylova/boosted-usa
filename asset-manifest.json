@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.41d0a643.css",
-    "main.js": "./static/js/main.4ea316f2.js",
+    "main.css": "./static/css/main.2fa2deb5.css",
+    "main.js": "./static/js/main.137dc3e9.js",
     "static/js/787.c1112931.chunk.js": "./static/js/787.c1112931.chunk.js",
     "static/media/boosted-revs.png": "./static/media/boosted-revs.605adc6e5b176db96cc1.png",
     "static/media/electric-skateboards.png": "./static/media/electric-skateboards.2f90c3bbec4e3e9c58fd.png",
@@ -18,8 +18,14 @@
     "static/media/Roboto.woff": "./static/media/Roboto.59d18e163bfcd0607572.woff",
     "static/media/Robotobold.woff2": "./static/media/Robotobold.23c8ce07bd38f6723622.woff2",
     "static/media/Roboto.woff2": "./static/media/Roboto.806e04d8241d87f99a68.woff2",
+    "static/media/acc-rev-tube.png": "./static/media/acc-rev-tube.94526a9a88261479c502.png",
+    "static/media/adv-go-far.svg": "./static/media/adv-go-far.2c2d2d0586f2797f980d7df04cb0d7de.svg",
+    "static/media/logo-boosted-description.svg": "./static/media/logo-boosted-description.11e38ef9490bc188910d98be06da60a5.svg",
+    "static/media/adv-go-fast.svg": "./static/media/adv-go-fast.bde2207ac1a41bea41fb33513375dd8c.svg",
     "static/media/revicons.eot": "./static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "./static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/adv-go-safe.svg": "./static/media/adv-go-safe.38c9878c99f141a7d2c50d6349096d33.svg",
+    "static/media/adv-built-to-last.svg": "./static/media/adv-built-to-last.216ef5a7a6f8e29fd50f0de6b8153c35.svg",
     "static/media/revicons.woff": "./static/media/revicons.e8746a624ed098489406.woff",
     "static/media/header-logo.svg": "./static/media/header-logo.5e856336f6a024bfe93ecd989ad0ef19.svg",
     "static/media/popular-mechanics.svg": "./static/media/popular-mechanics.39e669117ccb04b0b5e3b4a016b11a0d.svg",
@@ -28,14 +34,22 @@
     "static/media/electrec.svg": "./static/media/electrec.8b363891468413d4e58951dbb3eab2e9.svg",
     "static/media/wired.svg": "./static/media/wired.bba1750ebe0840a1c3b35e705aca09c8.svg",
     "static/media/icon-user.svg": "./static/media/icon-user.9b09aa7226180f46d0b736f8d2f2b5d8.svg",
+    "static/media/footer-logo-pay.svg": "./static/media/footer-logo-pay.9325d7ec73807584d49c94a012e141b9.svg",
+    "static/media/footer-logo-google-pay.svg": "./static/media/footer-logo-google-pay.4b126f8100ac2c363c20face58f3216f.svg",
+    "static/media/footer-logo-klarna.svg": "./static/media/footer-logo-klarna.c93069548570ab0c79acac2046f3f0d2.svg",
     "static/media/boosted-shop-logo.svg": "./static/media/boosted-shop-logo.c2def4bae6527aff1550d039991b55f3.svg",
+    "static/media/footer-logo-visa.svg": "./static/media/footer-logo-visa.49a078a67db48830260e48a71384210c.svg",
+    "static/media/footer-logo-amex.svg": "./static/media/footer-logo-amex.47b0039ab6b05e70f3094ebfcfbfc7f6.svg",
+    "static/media/footer-logo-diners.svg": "./static/media/footer-logo-diners.47d6294797bbc736a0b5d33bc9433bd2.svg",
+    "static/media/footer-logo-master-card.svg": "./static/media/footer-logo-master-card.3b568a1e3411e4c0ca1f340fdf418608.svg",
     "index.html": "./index.html",
-    "main.41d0a643.css.map": "./static/css/main.41d0a643.css.map",
-    "main.4ea316f2.js.map": "./static/js/main.4ea316f2.js.map",
+    "static/media/footer-logo-v.svg": "./static/media/footer-logo-v.611e6095a464068967757e1bc2445da5.svg",
+    "main.2fa2deb5.css.map": "./static/css/main.2fa2deb5.css.map",
+    "main.137dc3e9.js.map": "./static/js/main.137dc3e9.js.map",
     "787.c1112931.chunk.js.map": "./static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41d0a643.css",
-    "static/js/main.4ea316f2.js"
+    "static/css/main.2fa2deb5.css",
+    "static/js/main.137dc3e9.js"
   ]
 }
