@@ -6,10 +6,11 @@ import ElectricSkateboards from '../ElectricSkateboards/ElectricSkateboards';
 import BoostedRev from '../BoostedRev/BoostedRev';
 import Shop from '../Shop/Shop';
 import Videos from '../Videos/Videos';
-import styles from './Main.module.scss';
 import Accessories from '../Accessories/Accessories';
 import Advantages from '../Advantages/Advantages';
 import AboutBoosted from '../AboutBoosted/AboutBoosted';
+import Footer from '../Footer/Footer';
+import styles from './Main.module.scss';
 
 const Main: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Main: React.FC = () => {
       <Accessories />
       <Advantages />
       <AboutBoosted />
+      <Footer />
     </main>
   );
 }

@@ -1,0 +1,41 @@
+@import '../../utils/styles/mixins';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  justify-self: center;
+
+  .footer__text {
+    margin: 20px 0 20px 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.44;
+    color: #000000;
+
+    .footer__link {
+      text-decoration: none;
+      color: #ff4a32;
+    }
+
+    .footer__link:hover {
+      @include hover;
+    }
+  }
+
+  .footer__paymentSystems {
+    list-style-type: none;
+    display: flex;
+    column-gap: 5px;
+    margin: 20px 10px 20px 0;
+    padding: 0;
+
+    .footer__paymentSystem {
+      width: 38px;
+      height: 24px;
+      display: block;
+    }
+  }
+}
