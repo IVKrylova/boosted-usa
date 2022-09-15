@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
+import { Link } from 'react-router-dom';
 import { accessoriesList } from '../../utils/data/accessories';
 import 'react-multi-carousel/lib/styles.css';
 import styles from './Accessories.module.scss';
@@ -37,7 +38,11 @@ const Accessories: React.FC = () => {
           return (
             <div key={item.id} className={styles.accessory}>
               <img alt={item.name} src={item.img} className={styles.accessory__img} />
-              <h3 className={styles.accessory__name}>{item.name}</h3>
+              <h3 className={styles.accessory__name}>
+                <Link className={styles.accessory__link} to={`/catalog:${item.id}`}>
+                  {item.name}
+                </Link>
+              </h3>
               <p className={`${styles.accessory__price} ${item.availability ? '' : styles.accessory__price_hidden}`}>
                 {`$${item.price}`} <span className={`${styles.accessory__otherPrice} ${item.otherPrice ? styles.accessory__otherPrice_visible : ''}`}>{`$${item.otherPrice}`}</span>
               </p>

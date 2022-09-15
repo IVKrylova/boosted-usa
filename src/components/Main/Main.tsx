@@ -9,7 +9,6 @@ import Videos from '../Videos/Videos';
 import Accessories from '../Accessories/Accessories';
 import Advantages from '../Advantages/Advantages';
 import AboutBoosted from '../AboutBoosted/AboutBoosted';
-import Footer from '../Footer/Footer';
 import styles from './Main.module.scss';
 
 const Main: React.FC = () => {
@@ -25,7 +24,6 @@ const Main: React.FC = () => {
       <Accessories />
       <Advantages />
       <AboutBoosted />
-      <Footer />
     </main>
   );
 }

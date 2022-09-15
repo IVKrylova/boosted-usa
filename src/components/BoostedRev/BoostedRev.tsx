@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import womanOnRev from '../../images/woman-on-rev.png';
 import speedRev from '../../images/speed-rev.png';
 import styles from './BoostedRev.module.scss';
@@ -23,10 +24,12 @@ const BoostedRev: React.FC = () => {
           time at all. Stop and go with the roll of your thumb. Its intuitive design
           means there’s almost no learning curve.
         </p>
-        <Button
-          text='Shop Now'
-          modifier={styles.button_plase_boostedRev}
-        />
+        <Link to="/catalog">
+          <Button
+            text="Shop Now"
+            modifier={styles.button_plase_boostedRev}
+          />
+        </Link>
       </div>
     </section>
   );

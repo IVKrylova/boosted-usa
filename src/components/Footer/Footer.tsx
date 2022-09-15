@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.scss';
 import amex from '../../images/footer-logo-amex.svg';
 import dinersClub from '../../images/footer-logo-diners.svg';
@@ -14,11 +15,11 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <p className={styles.footer__text}>
         <span className={styles.footer__copyright}>&copy;{new Date().getFullYear()} </span>
-        <a className={styles.footer__link}>Boosted USA</a>
+        <Link to="/" className={styles.footer__link}>Boosted USA</Link>
         . All Rights Reserved.
-        <a className={styles.footer__link}>Terms of Service</a>
+        <Link to="/more-info" className={styles.footer__link}>Terms of Service</Link>
         . Built by
-        <a className={styles.footer__link}>BH</a>
+        <Link to="/" className={styles.footer__link}>BH</Link>
       </p>
       <ul className={styles.footer__paymentSystems}>
         <li>

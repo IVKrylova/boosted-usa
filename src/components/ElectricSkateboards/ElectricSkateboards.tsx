@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import styles from './ElectricSkateboards.module.scss';
 
@@ -11,9 +12,11 @@ const ElectricSkateboards: React.FC = () => {
         Cruising campus, going to work or getting through that
         long list of errands has never been easier or more fun.
       </p>
-      <Button
-        text='Shop Now'
-      />
+      <Link to='/catalog'>
+        <Button
+          text='Shop Now'
+        />
+      </Link>
     </section>
   );
 }

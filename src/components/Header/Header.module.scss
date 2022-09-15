@@ -7,6 +7,7 @@
     'message message message'
     'logo navMenu account';
   @include width($widthPages);
+  height: min-content;
 
   .header__message {
     grid-area: message;
@@ -18,7 +19,6 @@
     line-height: 1.25;
     text-align: center;
     letter-spacing: 2px;
-    color: #FBFBFB;
     margin: 0 auto;
     padding: 7px 0;
     box-sizing: border-box;

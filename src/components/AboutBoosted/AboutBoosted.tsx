@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './AboutBoosted.module.scss';
 import logoBoosted from '../../images/logo-boosted-description.svg';
 
@@ -11,49 +12,49 @@ const AboutBoosted: React.FC = () => {
       </h3>
       <ul className={styles.aboutBoosted__links}>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/catalog" className={styles.aboutBoosted__link}>
             Electric Skateboards
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/catalog" className={styles.aboutBoosted__link}>
             Electric Scooters
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/catalog" className={styles.aboutBoosted__link}>
             Accessories
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/faq" className={styles.aboutBoosted__link}>
             FAQs
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/more-info" className={styles.aboutBoosted__link}>
             Warranty
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/more-info" className={styles.aboutBoosted__link}>
             Quick Start Guide
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/more-info" className={styles.aboutBoosted__link}>
             Contact
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/catalog" className={styles.aboutBoosted__link}>
             Gift Card
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.aboutBoosted__link}>
+          <Link to="/more-info" className={styles.aboutBoosted__link}>
             Accessibility Statement
-          </a>
+          </Link>
         </li>
       </ul>
       <h3 className={`${styles.aboutBoosted__title} ${styles.aboutBoosted__title_place_text}`}>

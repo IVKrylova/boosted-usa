@@ -58,7 +58,12 @@
       margin: 13px auto 0;
     }
 
-    .accessory__name:hover {
+    .accessory__link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .accessory__link:hover {
       @include hover;
     }
 

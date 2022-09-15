@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 import styles from './Banner.module.scss';
 
 const Banner: React.FC = () => {
@@ -13,14 +14,18 @@ const Banner: React.FC = () => {
       </p>
       <ul className={styles.banner__buttonsList}>
         <li className={styles.banner__button}>
-          <Button
-            text='BOOSTED REVS'
-          />
+          <Link to="/catalog">
+            <Button
+              text='BOOSTED REVS'
+            />
+          </Link>
         </li>
         <li className={styles.banner__button}>
+        <Link to="/catalog">
           <Button
             text='BOOSTED BOARDS'
           />
+        </Link>
         </li>
       </ul>
     </section>
