@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
@@ -8,19 +8,36 @@ import Catalog from '../Catalog/Catalog';
 import MoreInfo from '../MoreInfo/MoreInfo';
 import Profile from '../Profile/Profile';
 import StoreCart from '../StoreCart/StoreCart';
-import FaqContainer from '../../containers/FaqContainer';
+import FaqList from '../FaqList/FaqList';
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
-    <div className="app">
+    <div className='app'>
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/more-info" element={<MoreInfo />} />
-        <Route path="/faq" element={<FaqContainer />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/store-cart" element={<StoreCart />} />
+        <Route
+          path='/'
+          element={<Main />}
+        />
+        <Route
+          path='/catalog'
+          element={<Catalog />}
+        />
+        <Route
+          path='/more-info'
+          element={<MoreInfo />}
+        />
+        <Route
+          path='/faq'
+          element={<FaqList />} />
+        <Route
+          path='/profile'
+          element={<Profile />}
+        />
+        <Route
+          path='/store-cart'
+          element={<StoreCart />}
+        />
       </Routes>
       <Footer />
     </div>

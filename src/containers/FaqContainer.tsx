@@ -1,4 +1,5 @@
-import React from 'react';
+export {}
+/* import React from 'react';
 import { useTypeSelector } from '../hooks/useTypeSelector';
 import Faq from '../components/Faq/Faq';
 import { useActions } from '../hooks/useActions';
@@ -19,3 +20,4 @@ const FaqContainer: React.FC = () => {
 }
 
 export default FaqContainer;
+ */
