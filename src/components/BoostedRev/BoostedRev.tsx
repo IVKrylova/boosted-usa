@@ -1,11 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import womanOnRev from '../../images/woman-on-rev.png';
 import speedRev from '../../images/speed-rev.png';
 import styles from './BoostedRev.module.scss';
 import Button from '../Button/Button';
 
-const BoostedRev: React.FC = () => {
+const BoostedRev: FC = () => {
   return (
     <section className={styles.boostedRev}>
       <ul className={styles.imagesList}>
@@ -24,9 +24,9 @@ const BoostedRev: React.FC = () => {
           time at all. Stop and go with the roll of your thumb. Its intuitive design
           means there’s almost no learning curve.
         </p>
-        <Link to="/catalog">
+        <Link to='/catalog'>
           <Button
-            text="Shop Now"
+            text='Shop Now'
             modifier={styles.button_plase_boostedRev}
           />
         </Link>

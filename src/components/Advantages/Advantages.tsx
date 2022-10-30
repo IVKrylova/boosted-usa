@@ -1,16 +1,16 @@
-import React from 'react';
+import { FC } from 'react';
 import styles from './Advantages.module.scss';
 import logoGoFast from '../../images/adv-go-fast.svg';
 import logoGoFar from '../../images/adv-go-far.svg';
 import logoGoSafe from '../../images/adv-go-safe.svg';
 import logoBuiltToLast from '../../images/adv-built-to-last.svg';
 
-const Advantages: React.FC = () => {
+const Advantages: FC = () => {
   return (
     <section className={styles.advantages}>
       <ul className={styles.advantages__list}>
         <li className={styles.advantage}>
-          <img className={styles.advantage__logo} src={logoGoFast} alt="logo Go Fast" />
+          <img className={styles.advantage__logo} src={logoGoFast} alt='logo Go Fast' />
           <h3 className={styles.advantage__title}>Go Fast</h3>
           <p className={styles.advantage__text}>
             Boosted is known for its premium performance boards offering
@@ -18,7 +18,7 @@ const Advantages: React.FC = () => {
           </p>
         </li>
         <li className={styles.advantage}>
-          <img className={styles.advantage__logo} src={logoGoFar} alt="logo Go Far" />
+          <img className={styles.advantage__logo} src={logoGoFar} alt='logo Go Far' />
           <h3 className={styles.advantage__title}>Go Far</h3>
           <p className={styles.advantage__text}>
             With optional extended battery life, you can get wherever you need to
@@ -26,14 +26,14 @@ const Advantages: React.FC = () => {
           </p>
         </li>
         <li className={styles.advantage}>
-          <img className={styles.advantage__logo} src={logoGoSafe} alt="logo Go Safe" />
+          <img className={styles.advantage__logo} src={logoGoSafe} alt='logo Go Safe' />
           <h3 className={styles.advantage__title}>Go Safe</h3>
           <p className={styles.advantage__text}>
             Safety is a #1 priority for Boosted, always wear a helmet when riding.
           </p>
         </li>
         <li className={styles.advantage}>
-          <img className={styles.advantage__logo} src={logoBuiltToLast} alt="logo Built To Last" />
+          <img className={styles.advantage__logo} src={logoBuiltToLast} alt='logo Built To Last' />
           <h3 className={styles.advantage__title}>Built To Last</h3>
           <p className={styles.advantage__text}>
             Boosted products are engineered to last for years and are extremely reliable.

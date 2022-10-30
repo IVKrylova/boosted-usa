@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const MoreInfo: React.FC = () => {
+const MoreInfo: FC = () => {
   return (
     <main>
 

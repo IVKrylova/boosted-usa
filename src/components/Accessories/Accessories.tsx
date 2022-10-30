@@ -1,11 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import Carousel from 'react-multi-carousel';
 import { Link } from 'react-router-dom';
 import { accessoriesList } from '../../utils/data/accessories';
 import 'react-multi-carousel/lib/styles.css';
 import styles from './Accessories.module.scss';
 
-const Accessories: React.FC = () => {
+const Accessories: FC = () => {
   // настройка слайдера
   const responsive = {
     desktop: {

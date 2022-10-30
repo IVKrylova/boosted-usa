@@ -1,8 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
 import ItemBoostedShop from '../ItemBoostedShop/ItemBoostedShop';
 import styles from './BoostedShop.module.scss';
 
-const BoostedShop: React.FC = () => {
+const BoostedShop: FC = () => {
   return (
     <section className={styles.boostedShop}>
       <h2 className={styles.title}>

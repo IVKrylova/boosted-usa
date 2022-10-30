@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const StoreCart: React.FC = () => {
+const StoreCart: FC = () => {
   return (
     <main>
 

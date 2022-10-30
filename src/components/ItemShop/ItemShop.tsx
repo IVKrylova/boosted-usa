@@ -1,13 +1,13 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ItemShop.module.scss';
 
-interface Props {
+interface ItemShopProps {
   title: string;
   modifier: string;
 }
 
-const ItemShop: React.FC<Props> = ({ title, modifier }) => {
+const ItemShop: FC<ItemShopProps> = ({ title, modifier }) => {
   return (
     <li className={`${styles.linksList__item} ${modifier}`}>
       <h3 className={styles.linksList__title}>{title}</h3>

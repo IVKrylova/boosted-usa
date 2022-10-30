@@ -1,8 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
 import ItemShop from '../ItemShop/ItemShop';
 import styles from './Shop.module.scss';
 
-const Shop: React.FC = () => {
+const Shop: FC = () => {
   return (
     <section className={styles.shop}>
       <ul className={styles.linksList}>

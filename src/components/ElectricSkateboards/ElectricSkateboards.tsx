@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import styles from './ElectricSkateboards.module.scss';
 
-const ElectricSkateboards: React.FC = () => {
+const ElectricSkateboards: FC = () => {
   return (
     <section className={styles.electricSkateboards}>
       <p className={`${styles.text} ${styles.text_place_top}`}>High-performance</p>

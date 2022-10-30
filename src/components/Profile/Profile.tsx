@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const Profile: React.FC = () => {
+const Profile: FC = () => {
   return (
     <main>
 

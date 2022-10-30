@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import './App.scss';
-import { Route, Routes } from 'react-router-dom';
 import Catalog from '../Catalog/Catalog';
 import MoreInfo from '../MoreInfo/MoreInfo';
 import Profile from '../Profile/Profile';
 import StoreCart from '../StoreCart/StoreCart';
 import FaqList from '../FaqList/FaqList';
+import './App.scss';
 
 const App: FC = () => {
   return (

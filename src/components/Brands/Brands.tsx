@@ -1,11 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import styles from './Brands.module.scss';
 import electrec from '../../images/electrec.svg';
 import techcruch from '../../images/techcruch.svg';
 import popularMechanics from '../../images/popular-mechanics.svg';
 import wired from '../../images/wired.svg';
 
-const Brands: React.FC = () => {
+const Brands: FC = () => {
   return (
     <section className={styles.brands}>
       <ul className={styles.brandsList}>

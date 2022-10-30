@@ -1,9 +1,9 @@
-import React from 'react';
-import Button from '../Button/Button';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 import styles from './Banner.module.scss';
 
-const Banner: React.FC = () => {
+const Banner: FC = () => {
   return (
     <section className={styles.banner}>
       <h1 className={styles.banner__title}>
@@ -14,14 +14,14 @@ const Banner: React.FC = () => {
       </p>
       <ul className={styles.banner__buttonsList}>
         <li className={styles.banner__button}>
-          <Link to="/catalog">
+          <Link to='/catalog'>
             <Button
               text='BOOSTED REVS'
             />
           </Link>
         </li>
         <li className={styles.banner__button}>
-        <Link to="/catalog">
+        <Link to='/catalog'>
           <Button
             text='BOOSTED BOARDS'
           />
