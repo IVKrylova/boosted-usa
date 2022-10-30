@@ -11,7 +11,9 @@ const Header: FC = () => {
       <p className={styles.header__message}>
         Financing option available at checkout.
       </p>
-      <img className={styles.header__logo} src={logo} alt='logotype' />
+      <Link to='/' className={styles.header__logo}>
+        <img src={logo} alt='logotype' />
+      </Link>
       <nav className={styles.navMenu}>
         <ul className={styles.navMenu__list}>
           <li className={styles.navMenu__item}>
