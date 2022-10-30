@@ -24,21 +24,18 @@ const FaqItem: React.FC<Props> = ({
   changeStateByClickMinus,
   item,
 }) => {
-
-  // обработчик клика на плюс
-  const handleClickPlus = () => {
-    changeStateByClickPlus();
-  }
-
-  // обработчик клика на минус
-  const handleClickMinus = () => {
-    changeStateByClickMinus();
-  }
-
-  // классы элементов
   const classIconPlus = `${styles.faq__icon} ${plusVisible ? styles.faq__icon_visible : styles.faq__icon_hidden}`;
   const classIconMinus = `${styles.faq__icon} ${minusVisible ? styles.faq__icon_visible : styles.faq__icon_hidden}`;
   const classAnswer = `${styles.faq__answer} ${answerVisible ? styles.faq__answer_visible : ''}`;
+
+  const handleClickPlus = (evt: React.MouseEvent) => {
+    console.log(evt.target)
+    changeStateByClickPlus();
+  }
+
+  const handleClickMinus = () => {
+    changeStateByClickMinus();
+  }
 
   return (
     <li className={styles.faq__item}>
@@ -47,12 +44,14 @@ const FaqItem: React.FC<Props> = ({
         alt="icon plus"
         className={classIconPlus}
         onClick={handleClickPlus}
+        id={item.id.toString()}
       />
       <img
         src={minus}
         alt="icon minus"
         className={classIconMinus}
         onClick={handleClickMinus}
+        id={item.id.toString()}
       />
       <h2 className={styles.faq__question}>
         {item.question}

@@ -4,9 +4,7 @@ import Faq from '../components/Faq/Faq';
 import { useActions } from '../hooks/useActions';
 
 const FaqContainer: React.FC = () => {
-    // получаем доступ к состоянию
     const { plusVisible, minusVisible, answerVisible } = useTypeSelector(state => state.faq);
-    // получаем доступ к функциям-обработчикам actions
     const { changeStateByClickPlus, changeStateByClickMinus} = useActions();
 
     return (
