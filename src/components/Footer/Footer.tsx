@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import List from '../UI/List';
 import { paymentSystems } from '../../utils/data/paymentSystem';
 import styles from './Footer.module.scss';
 
@@ -14,15 +15,15 @@ const Footer: FC = () => {
         . Built by
         <Link to='/' className={styles.footer__link}>BH</Link>
       </p>
-      <ul className={styles.footer__paymentSystems}>
-        {paymentSystems.map(system => {
-          return (
-            <li key={system.id}>
-              <img src={system.img} alt={system.name} className={styles.footer__paymentSystem} />
-            </li>
-          )
-        })}
-      </ul>
+      <List
+        classList={styles.footer__paymentSystems}
+        items={paymentSystems}
+        renderItem={system =>
+          <li key={system.id}>
+            <img src={system.img} alt={system.name} className={styles.footer__paymentSystem} />
+          </li>
+        }
+      />
     </footer>
   );
 }
