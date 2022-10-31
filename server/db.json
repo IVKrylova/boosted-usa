@@ -130,5 +130,25 @@
       "price": "100",
       "id": "6"
     }
+  ],
+  "giftCard": [
+    {
+      "name": "Gift Card",
+      "img": "https://img.freepik.com/free-vector/gift-coupon-with-stain-and-hand-drawn-bow_23-2147661478.jpg?w=740&t=st=1667241492~exp=1667242092~hmac=4a6c273286166da75dac0dcf7cddc87a354788819b4938bd4d014b8f4b976a4c",
+      "price": "100",
+      "id": "1"
+    },
+    {
+      "name": "Gift Card",
+      "img": "https://img.freepik.com/free-vector/gift-coupon-with-stain-and-hand-drawn-bow_23-2147661478.jpg?w=740&t=st=1667241492~exp=1667242092~hmac=4a6c273286166da75dac0dcf7cddc87a354788819b4938bd4d014b8f4b976a4c",
+      "price": "100",
+      "id": "2"
+    },
+    {
+      "name": "Gift Card",
+      "img": "https://img.freepik.com/free-vector/gift-coupon-with-stain-and-hand-drawn-bow_23-2147661478.jpg?w=740&t=st=1667241492~exp=1667242092~hmac=4a6c273286166da75dac0dcf7cddc87a354788819b4938bd4d014b8f4b976a4c",
+      "price": "100",
+      "id": "3"
+    }
   ]
 }

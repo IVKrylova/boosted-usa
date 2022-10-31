@@ -8,8 +8,9 @@ import MoreInfo from '../MoreInfo/MoreInfo';
 import Profile from '../Profile/Profile';
 import StoreCart from '../StoreCart/StoreCart';
 import FaqList from '../FaqList/FaqList';
-import './App.scss';
 import CatalogAccessories from '../CatalogAccessories/CatalogAccessories';
+import CatalogGiftCard from '../CatalogGiftCard/CatalogGiftCard';
+import './App.scss';
 
 const App: FC = () => {
   return (
@@ -27,6 +28,10 @@ const App: FC = () => {
         <Route
           path='/accessories'
           element={<CatalogAccessories />}
+        />
+        <Route
+          path='/gift-card'
+          element={<CatalogGiftCard />}
         />
         <Route
           path='/more-info'
