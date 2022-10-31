@@ -3,21 +3,21 @@ import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
 import Catalog from '../Catalog/Catalog';
 
-const CatalogGiftCard: FC = () => {
-  const { giftCard, error, loading } = useTypeSelector(state => state.giftCard);
-  const { fetchGiftCard } = useActions();
+const CatalogScooters: FC = () => {
+  const { catalog, error, loading } = useTypeSelector(state => state.catalog);
+  const { fetchCatalog } = useActions();
 
   useEffect(() => {
-    fetchGiftCard();
+    fetchCatalog();
   }, []);
 
   return (
     <Catalog
       loading={loading}
-      catalog={giftCard}
+      catalog={catalog}
       error={error}
     />
   );
 }
 
-export default CatalogGiftCard;
+export default CatalogScooters;

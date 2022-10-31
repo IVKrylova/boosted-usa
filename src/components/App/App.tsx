@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import Catalog from '../Catalog/Catalog';
+import CatalogScooters from '../CatalogScooters/CatalogScooters';
 import MoreInfo from '../MoreInfo/MoreInfo';
 import Profile from '../Profile/Profile';
 import StoreCart from '../StoreCart/StoreCart';
@@ -23,7 +23,7 @@ const App: FC = () => {
         />
         <Route
           path='/catalog'
-          element={<Catalog />}
+          element={<CatalogScooters />}
         />
         <Route
           path='/accessories'
