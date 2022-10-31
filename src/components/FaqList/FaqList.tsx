@@ -1,10 +1,27 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
+import axios from 'axios';
 import FaqItem from '../FaqItem/FaqItem';
 import List from '../UI/List';
-import { faqList } from '../../utils/data/faq';
+import { IFaq } from '../../types/types';
 import styles from './FaqList.module.scss';
 
 const FaqList: FC = () => {
+  const [faqList, setFaqList] = useState<IFaq[]>([]);
+
+  const getFaqList = async () => {
+    try {
+      const faqs = await axios.get<IFaq[]>('http://localhost:3001/faq');
+
+      setFaqList(faqs.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getFaqList();
+  }, []);
+
   return (
     <main className={styles.faq}>
       <List
@@ -15,6 +32,8 @@ const FaqList: FC = () => {
           key={faq.id}
         />}
       />
+
+
     </main>
   );
 }
