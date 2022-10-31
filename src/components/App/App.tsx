@@ -9,6 +9,7 @@ import Profile from '../Profile/Profile';
 import StoreCart from '../StoreCart/StoreCart';
 import FaqList from '../FaqList/FaqList';
 import './App.scss';
+import CatalogAccessories from '../CatalogAccessories/CatalogAccessories';
 
 const App: FC = () => {
   return (
@@ -22,6 +23,10 @@ const App: FC = () => {
         <Route
           path='/catalog'
           element={<Catalog />}
+        />
+        <Route
+          path='/accessories'
+          element={<CatalogAccessories />}
         />
         <Route
           path='/more-info'

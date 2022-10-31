@@ -22,7 +22,7 @@ const AboutBoosted: FC = () => {
           </Link>
         </li>
         <li>
-          <Link to='/catalog' className={styles.aboutBoosted__link}>
+          <Link to='/accessories' className={styles.aboutBoosted__link}>
             Accessories
           </Link>
         </li>
@@ -47,7 +47,7 @@ const AboutBoosted: FC = () => {
           </Link>
         </li>
         <li>
-          <Link to='/catalog' className={styles.aboutBoosted__link}>
+          <Link to='/gift-card' className={styles.aboutBoosted__link}>
             Gift Card
           </Link>
         </li>

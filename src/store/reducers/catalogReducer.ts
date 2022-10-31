@@ -6,7 +6,7 @@ const initialState: CatalogState = {
   error: null,
 }
 
-export const catalogReduser = (state = initialState, action: CatalogAction): CatalogState => {
+export const catalogReducer = (state = initialState, action: CatalogAction): CatalogState => {
   switch (action.type) {
     case CatalogActionTypes.FETCH_CATALOG:
       return { loading: true, catalog: [], error: null }

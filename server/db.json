@@ -92,5 +92,43 @@
       "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": "6"
     }
+  ],
+  "catalogAccessories": [
+    {
+      "name": "Trolley Wheels",
+      "img": "https://img.freepik.com/free-photo/trolley-wheels-isolated-white-background-close-up_185193-72110.jpg?w=996&t=st=1667217451~exp=1667218051~hmac=1a6d3a4b6956e2a55148cbe965ae6df19e98c5a2240e409e5d19acebadb81efc",
+      "price": "100",
+      "id": "1"
+    },
+    {
+      "name": "Trolley Wheels",
+      "img": "https://img.freepik.com/free-photo/trolley-wheels-isolated-white-background-close-up_185193-72110.jpg?w=996&t=st=1667217451~exp=1667218051~hmac=1a6d3a4b6956e2a55148cbe965ae6df19e98c5a2240e409e5d19acebadb81efc",
+      "price": "100",
+      "id": "2"
+    },
+    {
+      "name": "Trolley Wheels",
+      "img": "https://img.freepik.com/free-photo/trolley-wheels-isolated-white-background-close-up_185193-72110.jpg?w=996&t=st=1667217451~exp=1667218051~hmac=1a6d3a4b6956e2a55148cbe965ae6df19e98c5a2240e409e5d19acebadb81efc",
+      "price": "100",
+      "id": "3"
+    },
+    {
+      "name": "Trolley Wheels",
+      "img": "https://img.freepik.com/free-photo/trolley-wheels-isolated-white-background-close-up_185193-72110.jpg?w=996&t=st=1667217451~exp=1667218051~hmac=1a6d3a4b6956e2a55148cbe965ae6df19e98c5a2240e409e5d19acebadb81efc",
+      "price": "100",
+      "id": "4"
+    },
+    {
+      "name": "Trolley Wheels",
+      "img": "https://img.freepik.com/free-photo/trolley-wheels-isolated-white-background-close-up_185193-72110.jpg?w=996&t=st=1667217451~exp=1667218051~hmac=1a6d3a4b6956e2a55148cbe965ae6df19e98c5a2240e409e5d19acebadb81efc",
+      "price": "100",
+      "id": "5"
+    },
+    {
+      "name": "Trolley Wheels",
+      "img": "https://img.freepik.com/free-photo/trolley-wheels-isolated-white-background-close-up_185193-72110.jpg?w=996&t=st=1667217451~exp=1667218051~hmac=1a6d3a4b6956e2a55148cbe965ae6df19e98c5a2240e409e5d19acebadb81efc",
+      "price": "100",
+      "id": "6"
+    }
   ]
 }

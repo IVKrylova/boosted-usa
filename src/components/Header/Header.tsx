@@ -27,12 +27,12 @@ const Header: FC = () => {
             </Link>
           </li>
           <li className={styles.navMenu__item}>
-            <Link to='/catalog' className={styles.navMenu__link}>
+            <Link to='/accessories' className={styles.navMenu__link}>
               Accessories
             </Link>
           </li>
           <li className={styles.navMenu__item}>
-            <Link to='/catalog' className={styles.navMenu__link}>
+            <Link to='/gift-card' className={styles.navMenu__link}>
               Gift Card
             </Link>
           </li>
