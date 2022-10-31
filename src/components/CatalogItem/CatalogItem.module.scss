@@ -1,0 +1,68 @@
+@import '../../utils/styles/constants';
+@import '../../utils/styles/_mixins.scss';
+
+.catalogItem {
+  display: grid;
+  text-align: center;
+
+  .catalogItem__img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .catalogItem__name {
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 22px;
+  }
+
+  .catalogItem__link {
+    text-decoration: none;
+    color: $colorTitleItem;
+    font-weight: 400;
+  }
+
+  .catalogItem__link:hover {
+    @include hover;
+  }
+
+  .catalogItem__price {
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .catalogItem__button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px auto 0;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fe6637;
+    border-radius: 8px;
+    color: #fe6637;
+    transition: .2s ease-in-out;
+  }
+
+  .catalogItem__button:before {
+    content: '';
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+  }
+
+  .catalogItem__button:hover {
+    background: #fe6637;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .catalogItem__button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+  }
+}

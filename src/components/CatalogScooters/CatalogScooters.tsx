@@ -16,6 +16,7 @@ const CatalogScooters: FC = () => {
       loading={loading}
       catalog={catalog}
       error={error}
+      title='Scooters and Skateboards'
     />
   );
 }

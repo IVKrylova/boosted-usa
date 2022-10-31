@@ -16,6 +16,7 @@ const CatalogAccessories: FC = () => {
       loading={loading}
       catalog={accessories}
       error={error}
+      title='Accessories'
     />
   );
 }

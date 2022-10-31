@@ -16,6 +16,7 @@ const CatalogGiftCard: FC = () => {
       loading={loading}
       catalog={giftCard}
       error={error}
+      title='Gift Card'
     />
   );
 }
