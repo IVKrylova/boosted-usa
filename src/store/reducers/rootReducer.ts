@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import { catalogReduser } from './catalogReduser';
 
 export const rootReduser = combineReducers({
- /*  faq: faqReducer, */
+  catalog: catalogReduser,
 });
 
-export type RootState = ReturnType <typeof rootReduser>;
+export type RootState = ReturnType<typeof rootReduser>;
