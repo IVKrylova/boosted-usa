@@ -1,0 +1,25 @@
+.moreInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  .moreInfo__title {
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .sectionTitle {
+    margin: 15px auto 0;
+    text-align: center;
+  }
+
+  .text {
+    margin: 15px 15px 0;
+    width: 100%;
+  }
+
+  .contact__address {
+    margin: 15px 15px 0;
+    width: 100%;
+  }
+}
