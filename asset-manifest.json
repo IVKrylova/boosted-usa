@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.2fa2deb5.css",
-    "main.js": "./static/js/main.137dc3e9.js",
+    "main.css": "./static/css/main.8bb428c5.css",
+    "main.js": "./static/js/main.b8e01518.js",
     "static/js/787.c1112931.chunk.js": "./static/js/787.c1112931.chunk.js",
     "static/media/boosted-revs.png": "./static/media/boosted-revs.605adc6e5b176db96cc1.png",
     "static/media/electric-skateboards.png": "./static/media/electric-skateboards.2f90c3bbec4e3e9c58fd.png",
@@ -44,12 +44,14 @@
     "static/media/footer-logo-master-card.svg": "./static/media/footer-logo-master-card.3b568a1e3411e4c0ca1f340fdf418608.svg",
     "index.html": "./index.html",
     "static/media/footer-logo-v.svg": "./static/media/footer-logo-v.611e6095a464068967757e1bc2445da5.svg",
-    "main.2fa2deb5.css.map": "./static/css/main.2fa2deb5.css.map",
-    "main.137dc3e9.js.map": "./static/js/main.137dc3e9.js.map",
+    "static/media/icon-plus.svg": "./static/media/icon-plus.b5219e9dd8c1240867b8ed4db1e854d8.svg",
+    "static/media/icon-minus.svg": "./static/media/icon-minus.1bc345578b0cfedf8dd9d37b67026f5d.svg",
+    "main.8bb428c5.css.map": "./static/css/main.8bb428c5.css.map",
+    "main.b8e01518.js.map": "./static/js/main.b8e01518.js.map",
     "787.c1112931.chunk.js.map": "./static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fa2deb5.css",
-    "static/js/main.137dc3e9.js"
+    "static/css/main.8bb428c5.css",
+    "static/js/main.b8e01518.js"
   ]
 }
