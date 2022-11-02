@@ -11,9 +11,10 @@ interface CatalogProps {
   catalog: any[];
   error: string | null;
   title: string;
+  onClickButton: (item: { name: string, img: string, price: number, id: number }) => void;
 }
 
-const Catalog: FC<CatalogProps> = ({ loading, catalog, error, title }) => {
+const Catalog: FC<CatalogProps> = ({ loading, catalog, error, title, onClickButton }) => {
   const location = useLocation();
   const currentUrl = location.pathname;
 
@@ -30,6 +31,7 @@ const Catalog: FC<CatalogProps> = ({ loading, catalog, error, title }) => {
           item={item}
           key={item.id}
           url={currentUrl}
+          onClickButton={onClickButton}
         />}
       />
       <ErrorMessage

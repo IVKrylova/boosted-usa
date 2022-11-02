@@ -3,7 +3,11 @@ import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
 import Catalog from '../Catalog/Catalog';
 
-const CatalogGiftCard: FC = () => {
+interface CatalogGiftCardProps {
+  onClickButton: (item: { name: string, img: string, price: number, id: number }) => void;
+}
+
+const CatalogGiftCard: FC<CatalogGiftCardProps> = ({ onClickButton }) => {
   const { giftCard, error, loading } = useTypeSelector(state => state.giftCard);
   const { fetchGiftCard } = useActions();
 
@@ -17,6 +21,7 @@ const CatalogGiftCard: FC = () => {
       catalog={giftCard}
       error={error}
       title='Gift Card'
+      onClickButton={onClickButton}
     />
   );
 }

@@ -50,7 +50,7 @@ const Header: FC = () => {
           </Link>
         </li>
         <li>
-          <Link to='/store-cart' className={styles.account__link}>
+          <Link to='/cart' className={styles.account__link}>
             <img className={styles.account__icon} src={cart} alt='icon cart' />
           </Link>
         </li>

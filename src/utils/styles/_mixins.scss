@@ -7,3 +7,13 @@
   cursor: pointer;
   opacity: .7;
 }
+
+@mixin buttonCartItem {
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  border: none;
+  width: 20px;
+  background-color: transparent;
+  padding: 0;
+}

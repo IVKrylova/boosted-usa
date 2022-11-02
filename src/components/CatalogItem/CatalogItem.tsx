@@ -10,17 +10,22 @@ interface CatalogItemProps {
     id: number,
   };
   url: string;
+  onClickButton: (item: { name: string, img: string, price: number, id: number }) => void;
 }
 
-const CatalogItem: FC<CatalogItemProps> = ({ item, url }) => {
+const CatalogItem: FC<CatalogItemProps> = ({ item: { name, img, price, id }, url, onClickButton }) => {
+  const handleClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+    onClickButton({ name, img, price, id })
+  }
+
   return (
     <li className={styles.catalogItem}>
-      <img src={item.img} alt={item.name} className={styles.catalogItem__img} />
+      <img src={img} alt={name} className={styles.catalogItem__img} />
       <h2 className={styles.catalogItem__name}>
-        <Link to={`${url}/:${item.id}`} className={styles.catalogItem__link}>{item.name}</Link>
+        <Link to={`${url}/:${id}`} className={styles.catalogItem__link}>{name}</Link>
       </h2>
-      <p className={styles.catalogItem__price}>{`${item.price} $`}</p>
-      <button type='button' className={styles.catalogItem__button}>To Cart</button>
+      <p className={styles.catalogItem__price}>{`${price} $`}</p>
+      <button onClick={handleClickButton} type='button' className={styles.catalogItem__button}>To Cart</button>
     </li>
   );
 }

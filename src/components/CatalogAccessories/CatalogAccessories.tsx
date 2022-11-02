@@ -3,7 +3,11 @@ import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
 import Catalog from '../Catalog/Catalog';
 
-const CatalogAccessories: FC = () => {
+interface CatalogAccessoriesProps {
+  onClickButton: (item: { name: string, img: string, price: number, id: number }) => void;
+}
+
+const CatalogAccessories: FC<CatalogAccessoriesProps> = ({ onClickButton }) => {
   const { accessories, error, loading } = useTypeSelector(state => state.accessories);
   const { fetchAccessories } = useActions();
 
@@ -17,6 +21,7 @@ const CatalogAccessories: FC = () => {
       catalog={accessories}
       error={error}
       title='Accessories'
+      onClickButton={onClickButton}
     />
   );
 }

@@ -3,7 +3,11 @@ import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
 import Catalog from '../Catalog/Catalog';
 
-const CatalogScooters: FC = () => {
+interface CatalogScootersProps {
+  onClickButton: (item: { name: string, img: string, price: number, id: number }) => void;
+}
+
+const CatalogScooters: FC<CatalogScootersProps> = ({ onClickButton }) => {
   const { catalog, error, loading } = useTypeSelector(state => state.catalog);
   const { fetchCatalog } = useActions();
 
@@ -17,6 +21,7 @@ const CatalogScooters: FC = () => {
       catalog={catalog}
       error={error}
       title='Scooters and Skateboards'
+      onClickButton={onClickButton}
     />
   );
 }

@@ -1,12 +1,14 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useTypeSelector } from '../../hooks/useTypeSelector';
+import { useActions } from '../../hooks/useActions';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import CatalogScooters from '../CatalogScooters/CatalogScooters';
 import MoreInfo from '../MoreInfo/MoreInfo';
 import Profile from '../Profile/Profile';
-import StoreCart from '../StoreCart/StoreCart';
+import Cart from '../Cart/Cart';
 import FaqList from '../FaqList/FaqList';
 import CatalogAccessories from '../CatalogAccessories/CatalogAccessories';
 import CatalogGiftCard from '../CatalogGiftCard/CatalogGiftCard';
@@ -16,6 +18,17 @@ import ItemGiftCard from '../ItemGiftCard/ItemGiftCard';
 import './App.scss';
 
 const App: FC = () => {
+  const { cart } = useTypeSelector(state => state.cart);
+  const { addToCart } = useActions();
+
+  const handleClickAddToCart = (item: { name: string, img: string, price: number, id: number }) => {
+    addToCart(item);
+  }
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart])
+
   return (
     <div className='app'>
       <Header />
@@ -26,7 +39,11 @@ const App: FC = () => {
         />
         <Route
           path='/catalog'
-          element={<CatalogScooters />}
+          element={
+            <CatalogScooters
+              onClickButton={handleClickAddToCart}
+            />
+          }
         />
         <Route
           path='/catalog/:id'
@@ -34,7 +51,11 @@ const App: FC = () => {
         />
         <Route
           path='/accessories'
-          element={<CatalogAccessories />}
+          element={
+            <CatalogAccessories
+              onClickButton={handleClickAddToCart}
+            />
+          }
         />
         <Route
           path='/accessories/:id'
@@ -42,7 +63,11 @@ const App: FC = () => {
         />
         <Route
           path='/gift-card'
-          element={<CatalogGiftCard />}
+          element={
+            <CatalogGiftCard
+              onClickButton={handleClickAddToCart}
+            />
+          }
         />
         <Route
           path='/gift-card/:id'
@@ -60,8 +85,8 @@ const App: FC = () => {
           element={<Profile />}
         />
         <Route
-          path='/store-cart'
-          element={<StoreCart />}
+          path='/cart'
+          element={<Cart />}
         />
       </Routes>
       <Footer />
