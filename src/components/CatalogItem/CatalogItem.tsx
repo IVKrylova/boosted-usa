@@ -1,5 +1,6 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTypeSelector } from '../../hooks/useTypeSelector';
 import styles from './CatalogItem.module.scss';
 
 interface CatalogItemProps {
@@ -24,11 +25,16 @@ interface CatalogItemProps {
 
 const CatalogItem: FC<CatalogItemProps> = ({ item: { name, img, price, id, count = 1, initPrice = price }, url, onClickButton }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
+  const { cart } = useTypeSelector(state => state.cart);
 
   const handleClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     onClickButton({ name, img, price, id, count, initPrice });
     setIsButtonDisabled(true);
   }
+
+  useEffect(() => {
+    if (cart.some(el => el.id === id)) setIsButtonDisabled(true);
+  }, []);
 
   return (
     <li className={styles.catalogItem}>
