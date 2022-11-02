@@ -17,9 +17,7 @@ interface CartItemProps {
 const CartItem: FC<CartItemProps> = ({ item }) => {
   const { cart } = useTypeSelector(state => state.cart);
   const { changeItem } = useActions();
-
   const [countItem, setCountItem] = useState<number>(1);
-  const [totalPrice, setTotalPrice] = useState<number>(item.price);
 
   const handleClickPlus = (evt: React.MouseEvent<HTMLButtonElement>) => {
     const newCount = countItem + 1;
@@ -33,10 +31,6 @@ const CartItem: FC<CartItemProps> = ({ item }) => {
 
     changeItem(item.id, countItem);
   }
-
-  useEffect(() => {
-    setTotalPrice(countItem * item.initPrice);
-  }, [countItem]);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -59,7 +53,7 @@ const CartItem: FC<CartItemProps> = ({ item }) => {
           onClick={handleClickPlus}
         ></button>
         <p className={styles.cartItem__countValue}>
-          {countItem}
+          {item.count}
         </p>
         <button
           className={styles.cartItem__buttonMinus}
@@ -69,7 +63,7 @@ const CartItem: FC<CartItemProps> = ({ item }) => {
         ></button>
       </div>
       <p className={styles.cartItem__totalPrice}>
-        {`Total price $${totalPrice}`}
+        {`Total price $${item.price}`}
       </p>
       <button className={styles.cartItem__buttonDelete} aria-label='delete from the cart' type='button'></button>
     </li>
