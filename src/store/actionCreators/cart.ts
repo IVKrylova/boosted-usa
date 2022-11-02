@@ -20,3 +20,10 @@ export const changeItem = (id: number, count: number): CartAction => {
     payload: { id, count },
   }
 }
+
+export const deleteFromCart = (id: number): CartAction => {
+  return {
+    type: CartActionTypes.DELETE_FROM_CART,
+    payload: id,
+  }
+}

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
 import styles from './CartItem.module.scss';
@@ -16,7 +16,7 @@ interface CartItemProps {
 
 const CartItem: FC<CartItemProps> = ({ item }) => {
   const { cart } = useTypeSelector(state => state.cart);
-  const { changeItem } = useActions();
+  const { changeItem, deleteFromCart } = useActions();
   const [countItem, setCountItem] = useState<number>(1);
 
   const handleClickPlus = (evt: React.MouseEvent<HTMLButtonElement>) => {
@@ -30,6 +30,10 @@ const CartItem: FC<CartItemProps> = ({ item }) => {
     countItem === 1 ? setCountItem(1) : setCountItem(countItem - 1);
 
     changeItem(item.id, countItem);
+  }
+
+  const handleClickButtonDelete = (evt: React.MouseEvent<HTMLButtonElement>) => {
+    deleteFromCart(item.id);
   }
 
   useEffect(() => {
@@ -65,7 +69,12 @@ const CartItem: FC<CartItemProps> = ({ item }) => {
       <p className={styles.cartItem__totalPrice}>
         {`Total price $${item.price}`}
       </p>
-      <button className={styles.cartItem__buttonDelete} aria-label='delete from the cart' type='button'></button>
+      <button
+        className={styles.cartItem__buttonDelete}
+        aria-label='delete from the cart'
+        type='button'
+        onClick={handleClickButtonDelete}
+      ></button>
     </li>
   );
 }
