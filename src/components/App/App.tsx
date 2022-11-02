@@ -21,13 +21,20 @@ const App: FC = () => {
   const { cart } = useTypeSelector(state => state.cart);
   const { addToCart } = useActions();
 
-  const handleClickAddToCart = (item: { name: string, img: string, price: number, id: number, count: number }) => {
+  const handleClickAddToCart = (item: {
+    name: string,
+    img: string,
+    price: number,
+    id: number,
+    count: number,
+    initPrice: number
+  }) => {
     addToCart(item);
   }
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart])
+  }, [cart]);
 
   return (
     <div className='app'>

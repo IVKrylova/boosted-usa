@@ -4,7 +4,14 @@ import { useActions } from '../../hooks/useActions';
 import Catalog from '../Catalog/Catalog';
 
 interface CatalogScootersProps {
-  onClickButton: (item: { name: string, img: string, price: number, id: number, count: number }) => void;
+  onClickButton: (item: {
+    name: string,
+    img: string,
+    price: number,
+    id: number,
+    count: number,
+    initPrice: number
+  }) => void;
 }
 
 const CatalogScooters: FC<CatalogScootersProps> = ({ onClickButton }) => {

@@ -9,16 +9,24 @@ interface CatalogItemProps {
     price: number,
     id: number,
     count: number,
+    initPrice: number
   };
   url: string;
-  onClickButton: (item: { name: string, img: string, price: number, id: number, count: number }) => void;
+  onClickButton: (item: {
+    name: string,
+    img: string,
+    price: number,
+    id: number,
+    count: number,
+    initPrice: number
+  }) => void;
 }
 
-const CatalogItem: FC<CatalogItemProps> = ({ item: { name, img, price, id, count = 1, }, url, onClickButton }) => {
+const CatalogItem: FC<CatalogItemProps> = ({ item: { name, img, price, id, count = 1, initPrice = price }, url, onClickButton }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
 
   const handleClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onClickButton({ name, img, price, id, count });
+    onClickButton({ name, img, price, id, count, initPrice });
     setIsButtonDisabled(true);
   }
 

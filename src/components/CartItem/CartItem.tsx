@@ -1,4 +1,6 @@
 import { FC, useEffect, useState } from 'react';
+import { useTypeSelector } from '../../hooks/useTypeSelector';
+import { useActions } from '../../hooks/useActions';
 import styles from './CartItem.module.scss';
 
 interface CartItemProps {
@@ -7,24 +9,38 @@ interface CartItemProps {
     img: string,
     price: number,
     id: number,
+    count: number,
+    initPrice: number,
   };
 }
 
 const CartItem: FC<CartItemProps> = ({ item }) => {
+  const { cart } = useTypeSelector(state => state.cart);
+  const { changeItem } = useActions();
+
   const [countItem, setCountItem] = useState<number>(1);
   const [totalPrice, setTotalPrice] = useState<number>(item.price);
 
   const handleClickPlus = (evt: React.MouseEvent<HTMLButtonElement>) => {
-    setCountItem(countItem + 1);
+    const newCount = countItem + 1;
+
+    setCountItem(newCount);
+    changeItem(item.id, newCount);
   }
 
   const handleClickMinus = (evt: React.MouseEvent<HTMLButtonElement>) => {
     countItem === 1 ? setCountItem(1) : setCountItem(countItem - 1);
+
+    changeItem(item.id, countItem);
   }
 
   useEffect(() => {
-    setTotalPrice(countItem * item.price);
+    setTotalPrice(countItem * item.initPrice);
   }, [countItem]);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <li className={styles.cartItem}>
@@ -33,7 +49,7 @@ const CartItem: FC<CartItemProps> = ({ item }) => {
         {item.name}
       </h3>
       <p className={styles.cartItem__price}>
-        {`$${item.price}`}
+        {`$${item.initPrice}`}
       </p>
       <div className={styles.cartItem__count}>
         <button
