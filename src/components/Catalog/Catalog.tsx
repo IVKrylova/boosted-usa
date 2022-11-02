@@ -11,7 +11,7 @@ interface CatalogProps {
   catalog: any[];
   error: string | null;
   title: string;
-  onClickButton: (item: { name: string, img: string, price: number, id: number }) => void;
+  onClickButton: (item: { name: string, img: string, price: number, id: number, count: number }) => void;
 }
 
 const Catalog: FC<CatalogProps> = ({ loading, catalog, error, title, onClickButton }) => {

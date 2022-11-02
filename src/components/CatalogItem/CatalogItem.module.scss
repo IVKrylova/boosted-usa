@@ -44,7 +44,7 @@
     transition: .2s ease-in-out;
   }
 
-  .catalogItem__button:before {
+  .catalogItem__button::before {
     content: '';
     background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
     height: 50px;
@@ -61,8 +61,26 @@
     cursor: pointer;
   }
 
-  .catalogItem__button:hover:before {
+  .catalogItem__button:hover::before {
     left: 150px;
     transition: .5s ease-in-out;
+  }
+
+  .catalogItem__button_disabled {
+    background: #fe6637;
+    color: #fff;
+  }
+
+  .catalogItem__button_disabled::before {
+    background: transparent;
+  }
+
+  .catalogItem__button_disabled:hover {
+    cursor: default;
+  }
+
+  .catalogItem__button_disabled:hover::before {
+    left: 0px;
+    transition: none;
   }
 }

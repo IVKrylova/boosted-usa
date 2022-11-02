@@ -23,6 +23,7 @@ const Cart: FC = () => {
               renderItem={item =>
                 <CartItem
                   item={item}
+                  key={item.id}
                 />
               }
             />
