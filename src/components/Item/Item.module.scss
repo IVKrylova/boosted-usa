@@ -57,4 +57,22 @@
     left: 150px;
     transition: .5s ease-in-out;
   }
+
+  .item__button_disabled {
+    background: #fe6637;
+    color: #fff;
+  }
+
+  .item__button_disabled::before {
+    background: transparent;
+  }
+
+  .item__button_disabled:hover {
+    cursor: default;
+  }
+
+  .item__button_disabled:hover::before {
+    left: 0px;
+    transition: none;
+  }
 }
