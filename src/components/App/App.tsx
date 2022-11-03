@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
@@ -19,7 +19,9 @@ import './App.scss';
 
 const App: FC = () => {
   const { cart } = useTypeSelector(state => state.cart);
-  const { addToCart } = useActions();
+  const { addToCart, deleteFromCart, changeItem, getCartFromStorage } = useActions();
+  const [isItemAdded, setIsItemAdded] = useState<boolean>(false);
+  const [isItemDeleted, setIsItemDeleted] = useState<boolean>(false);
 
   const handleClickAddToCart = (item: {
     name: string,
@@ -30,11 +32,41 @@ const App: FC = () => {
     initPrice: number
   }) => {
     addToCart(item);
+    setIsItemAdded(true);
+  }
+
+  const handleClickDeleteFromCart = (id: number) => {
+    deleteFromCart(id);
+    setIsItemDeleted(true);
+  }
+
+  const handleClickPlus = (id: number, count: number) => {
+    changeItem(id, count);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  const handleClickMinus = (id: number, count: number) => {
+    changeItem(id, count);
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
+    if (isItemAdded) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+      setIsItemAdded(false);
+    }
+  }, [isItemAdded]);
+
+  useEffect(() => {
+    if (isItemDeleted) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+      setIsItemDeleted(false);
+    }
+  }, [isItemDeleted]);
+
+  useEffect(() => {
+    getCartFromStorage(JSON.parse(localStorage.cart));
+  }, [])
 
   return (
     <div className='app'>
@@ -93,7 +125,13 @@ const App: FC = () => {
         />
         <Route
           path='/cart'
-          element={<Cart />}
+          element={
+            <Cart
+              onClickDeleteFromCart={handleClickDeleteFromCart}
+              onClickPlus={handleClickPlus}
+              onClickMinus={handleClickMinus}
+            />
+          }
         />
       </Routes>
       <Footer />

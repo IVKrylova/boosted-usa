@@ -27,3 +27,10 @@ export const deleteFromCart = (id: number): CartAction => {
     payload: id,
   }
 }
+
+export const getCartFromStorage = (cart: any[]): CartAction => {
+  return {
+    type: CartActionTypes.GET_CART_FROM_STORAGE,
+    payload: cart,
+  }
+}

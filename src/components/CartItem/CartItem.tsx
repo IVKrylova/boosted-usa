@@ -1,6 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
-import { useTypeSelector } from '../../hooks/useTypeSelector';
-import { useActions } from '../../hooks/useActions';
+import React, { FC, useState } from 'react';
 import styles from './CartItem.module.scss';
 
 interface CartItemProps {
@@ -12,33 +10,29 @@ interface CartItemProps {
     count: number,
     initPrice: number,
   };
+  onClickDeleteFromCart: (id: number) => void;
+  onClickPlus: (id: number, count: number) => void;
+  onClickMinus: (id: number, count: number) => void;
 }
 
-const CartItem: FC<CartItemProps> = ({ item }) => {
-  const { cart } = useTypeSelector(state => state.cart);
-  const { changeItem, deleteFromCart } = useActions();
+const CartItem: FC<CartItemProps> = ({ item, onClickDeleteFromCart, onClickPlus, onClickMinus }) => {
   const [countItem, setCountItem] = useState<number>(1);
 
   const handleClickPlus = (evt: React.MouseEvent<HTMLButtonElement>) => {
     const newCount = countItem + 1;
 
     setCountItem(newCount);
-    changeItem(item.id, newCount);
+    onClickPlus(item.id, newCount);
   }
 
   const handleClickMinus = (evt: React.MouseEvent<HTMLButtonElement>) => {
     countItem === 1 ? setCountItem(1) : setCountItem(countItem - 1);
-
-    changeItem(item.id, countItem);
+    onClickMinus(item.id, countItem);
   }
 
   const handleClickButtonDelete = (evt: React.MouseEvent<HTMLButtonElement>) => {
-    deleteFromCart(item.id);
+    onClickDeleteFromCart(item.id);
   }
-
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
 
   return (
     <li className={styles.cartItem}>

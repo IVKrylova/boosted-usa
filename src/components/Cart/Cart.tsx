@@ -5,7 +5,13 @@ import CartItem from '../CartItem/CartItem';
 import Message from '../Message/Message';
 import styles from './Cart.module.scss';
 
-const Cart: FC = () => {
+interface CartProps {
+  onClickDeleteFromCart: (id: number) => void;
+  onClickPlus: (id: number, count: number) => void;
+  onClickMinus: (id: number, count: number) => void;
+}
+
+const Cart: FC<CartProps> = ({ onClickDeleteFromCart, onClickPlus, onClickMinus }) => {
   const [sum, setSum] = useState<number>(0);
   const { cart } = useTypeSelector(state => state.cart);
 
@@ -30,6 +36,9 @@ const Cart: FC = () => {
                 <CartItem
                   item={item}
                   key={item.id}
+                  onClickDeleteFromCart={onClickDeleteFromCart}
+                  onClickPlus={onClickPlus}
+                  onClickMinus={onClickMinus}
                 />
               }
             />

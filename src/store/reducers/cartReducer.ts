@@ -21,6 +21,8 @@ export const cartReducer = (state = initialState, action: CartAction): CartState
           return el;
         })
       }
+    case CartActionTypes.GET_CART_FROM_STORAGE:
+      return { ...state, cart: action.payload }
     default:
       return state;
   }
