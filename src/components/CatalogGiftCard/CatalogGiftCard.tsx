@@ -1,17 +1,11 @@
 import { FC, useEffect } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
+import { Item } from '../../types/types';
 import Catalog from '../Catalog/Catalog';
 
 interface CatalogGiftCardProps {
-  onClickButton: (item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number
-   }) => void;
+  onClickButton: (item: Item) => void;
 }
 
 const CatalogGiftCard: FC<CatalogGiftCardProps> = ({ onClickButton }) => {

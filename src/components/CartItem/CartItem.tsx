@@ -1,15 +1,9 @@
 import React, { FC, useState } from 'react';
+import { Item } from '../../types/types';
 import styles from './CartItem.module.scss';
 
 interface CartItemProps {
-  item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number,
-  };
+  item: Item;
   onClickDeleteFromCart: (id: number) => void;
   onClickPlus: (id: number, count: number) => void;
   onClickMinus: (id: number, count: number) => void;

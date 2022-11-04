@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useParams } from 'react-router-dom';
-import Item from '../Item/Item';
+import UnitOfGood from '../UnitOfGood/UnitOfGood';
 
 const ItemGiftCard: FC = () => {
   const { giftCard } = useTypeSelector(state => state.giftCard);
@@ -10,7 +10,7 @@ const ItemGiftCard: FC = () => {
   const item = giftCard.find(el => el.id === id);
 
   return (
-    <Item item={item} />
+    <UnitOfGood item={item} />
   );
 }
 export default ItemGiftCard;

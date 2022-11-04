@@ -1,17 +1,13 @@
 import { FC, useEffect, useState } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
-import styles from './Item.module.scss';
+import { Item } from '../../types/types';
+import styles from './UnitOfGood.module.scss';
 
-interface ItemProps {
-  item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-  };
+interface UnitOfGoodProps {
+  item: Item;
 }
 
-const Item: FC<ItemProps> = ({ item }) => {
+const UnitOfGood: FC<UnitOfGoodProps> = ({ item }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
   const { cart } = useTypeSelector(state => state.cart);
 
@@ -33,4 +29,4 @@ const Item: FC<ItemProps> = ({ item }) => {
     </main>
   );
 }
-export default Item;
+export default UnitOfGood;

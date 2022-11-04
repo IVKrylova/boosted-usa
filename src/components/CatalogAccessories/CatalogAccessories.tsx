@@ -2,16 +2,10 @@ import { FC, useEffect } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useActions } from '../../hooks/useActions';
 import Catalog from '../Catalog/Catalog';
+import { Item } from '../../types/types';
 
 interface CatalogAccessoriesProps {
-  onClickButton: (item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number
-  }) => void;
+  onClickButton: (item: Item) => void;
 }
 
 const CatalogAccessories: FC<CatalogAccessoriesProps> = ({ onClickButton }) => {

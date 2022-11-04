@@ -1,26 +1,13 @@
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
+import { Item } from '../../types/types';
 import styles from './CatalogItem.module.scss';
 
 interface CatalogItemProps {
-  item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number
-  };
+  item: Item;
   url: string;
-  onClickButton: (item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number
-  }) => void;
+  onClickButton: (item: Item) => void;
 }
 
 const CatalogItem: FC<CatalogItemProps> = ({ item: { name, img, price, id, count = 1, initPrice = price }, url, onClickButton }) => {

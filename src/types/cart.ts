@@ -1,3 +1,5 @@
+import { Item } from './types';
+
 export interface CartState {
   cart: any[];
 }
@@ -11,14 +13,7 @@ export enum CartActionTypes {
 
 interface AddToCartAction {
   type: CartActionTypes.ADD_TO_CART;
-  payload: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number,
-  };
+  payload: Item;
 }
 
 interface DeleteFromCartAction {

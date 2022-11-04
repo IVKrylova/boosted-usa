@@ -1,13 +1,7 @@
 import { CartActionTypes, CartAction } from '../../types/cart';
+import { Item } from '../../types/types';
 
-export const addToCart = (item: {
-  name: string,
-  img: string,
-  price: number,
-  id: number,
-  count: number,
-  initPrice: number
-}): CartAction => {
+export const addToCart = (item: Item): CartAction => {
   return {
     type: CartActionTypes.ADD_TO_CART,
     payload: item,

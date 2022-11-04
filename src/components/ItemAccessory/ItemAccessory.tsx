@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useParams } from 'react-router-dom';
-import Item from '../Item/Item';
+import UnitOfGood from '../UnitOfGood/UnitOfGood';
 
 const ItemAccessory: FC = () => {
   const { accessories } = useTypeSelector(state => state.accessories);
@@ -10,7 +10,7 @@ const ItemAccessory: FC = () => {
   const item = accessories.find(el => el.id === id);
 
   return (
-    <Item item={item} />
+    <UnitOfGood item={item} />
   );
 }
 export default ItemAccessory;

@@ -5,20 +5,14 @@ import CatalogItem from '../CatalogItem/CatalogItem';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import styles from './Catalog.module.scss';
 import { useLocation } from 'react-router-dom';
+import { Item } from '../../types/types';
 
 interface CatalogProps {
   loading: boolean;
   catalog: any[];
   error: string | null;
   title: string;
-  onClickButton: (item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number
-  }) => void;
+  onClickButton: (item: Item) => void;
 }
 
 const Catalog: FC<CatalogProps> = ({ loading, catalog, error, title, onClickButton }) => {
@@ -34,12 +28,14 @@ const Catalog: FC<CatalogProps> = ({ loading, catalog, error, title, onClickButt
       <List
         classList={styles.catalog__list}
         items={catalog}
-        renderItem={item => <CatalogItem
-          item={item}
-          key={item.id}
-          url={currentUrl}
-          onClickButton={onClickButton}
-        />}
+        renderItem={item =>
+          <CatalogItem
+            item={item}
+            key={item.id}
+            url={currentUrl}
+            onClickButton={onClickButton}
+          />
+        }
       />
       <ErrorMessage
         text={error}

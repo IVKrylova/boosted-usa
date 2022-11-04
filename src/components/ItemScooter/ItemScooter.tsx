@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useParams } from 'react-router-dom';
-import Item from '../Item/Item';
+import UnitOfGood from '../UnitOfGood/UnitOfGood';
 
 const ItemScooter: FC = () => {
   const { catalog } = useTypeSelector(state => state.catalog);
@@ -10,7 +10,7 @@ const ItemScooter: FC = () => {
   const item = catalog.find(el => el.id === id);
 
   return (
-    <Item item={item} />
+    <UnitOfGood item={item} />
   );
 }
 

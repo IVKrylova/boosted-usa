@@ -15,6 +15,7 @@ import CatalogGiftCard from '../CatalogGiftCard/CatalogGiftCard';
 import ItemScooter from '../ItemScooter/ItemScooter';
 import ItemAccessory from '../ItemAccessory/ItemAccessory';
 import ItemGiftCard from '../ItemGiftCard/ItemGiftCard';
+import { Item } from '../../types/types';
 import './App.scss';
 
 const App: FC = () => {
@@ -23,14 +24,7 @@ const App: FC = () => {
   const [isItemAdded, setIsItemAdded] = useState<boolean>(false);
   const [isItemDeleted, setIsItemDeleted] = useState<boolean>(false);
 
-  const handleClickAddToCart = (item: {
-    name: string,
-    img: string,
-    price: number,
-    id: number,
-    count: number,
-    initPrice: number
-  }) => {
+  const handleClickAddToCart = (item: Item) => {
     addToCart(item);
     setIsItemAdded(true);
   }
