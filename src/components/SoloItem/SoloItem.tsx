@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { useParams } from 'react-router-dom';
-import { SoloItemType } from '../../types/types';
+import { SoloItemType, Item } from '../../types/types';
 import axios from 'axios';
 import styles from './SoloItem.module.scss';
 import Preloader from '../Preloader/Preloader';
@@ -9,9 +9,10 @@ import Message from '../Message/Message';
 
 interface SoloItemProps {
   type: string;
+  onClickButton: (item: Item) => void;
 }
 
-const SoloItem: FC<SoloItemProps> = ({ type }) => {
+const SoloItem: FC<SoloItemProps> = ({ type, onClickButton }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [message, setMessage] = useState<string>('');
@@ -36,6 +37,19 @@ const SoloItem: FC<SoloItemProps> = ({ type }) => {
     if (cart.some(el => el.id === item.id)) setIsButtonDisabled(true);
   }, [item]);
 
+  const handleClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+    onClickButton({
+      name: item.name,
+      img: item.img,
+      price: item.price,
+      id: item.id,
+      count: 1,
+      initPrice: item.price,
+      type: type
+    });
+    setIsButtonDisabled(true);
+  }
+
   return (
     <main className={styles.item}>
       {loading ?
@@ -49,6 +63,7 @@ const SoloItem: FC<SoloItemProps> = ({ type }) => {
           <button
             type='button'
             className={`${styles.item__button} ${isButtonDisabled ? styles.item__button_disabled : ''}`}
+            onClick={handleClickButton}
           >
             {isButtonDisabled ? 'In Cart' : 'To Cart'}
           </button>

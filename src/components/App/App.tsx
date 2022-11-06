@@ -82,6 +82,7 @@ const App: FC = () => {
           element={
             <SoloItem
               type='catalog'
+              onClickButton={handleClickAddToCart}
             />
           }
         />
@@ -98,6 +99,7 @@ const App: FC = () => {
           element={
             <SoloItem
               type='catalogAccessories'
+              onClickButton={handleClickAddToCart}
             />
           }
         />
@@ -114,6 +116,7 @@ const App: FC = () => {
           element={
             <SoloItem
               type='giftCard'
+              onClickButton={handleClickAddToCart}
             />}
         />
         <Route
