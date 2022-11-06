@@ -10,7 +10,8 @@ export interface Item {
   price: number,
   id: number,
   count: number,
-  initPrice: number
+  initPrice: number,
+  type: string
 }
 
 export interface SoloItemType {

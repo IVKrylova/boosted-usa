@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Item } from '../../types/types';
 import styles from './CartItem.module.scss';
 
@@ -32,7 +33,7 @@ const CartItem: FC<CartItemProps> = ({ item, onClickDeleteFromCart, onClickPlus,
     <li className={styles.cartItem}>
       <img className={styles.cartItem__img} alt={item.name} src={item.img} />
       <h3 className={styles.cartItem__name}>
-        {item.name}
+        <Link className={styles.cartItem__link} to={`${item.type}/:${item.id}`}>{item.name}</Link>
       </h3>
       <p className={styles.cartItem__price}>
         {`$${item.initPrice}`}

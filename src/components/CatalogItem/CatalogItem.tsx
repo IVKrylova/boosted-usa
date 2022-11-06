@@ -10,12 +10,12 @@ interface CatalogItemProps {
   onClickButton: (item: Item) => void;
 }
 
-const CatalogItem: FC<CatalogItemProps> = ({ item: { name, img, price, id, count = 1, initPrice = price }, url, onClickButton }) => {
+const CatalogItem: FC<CatalogItemProps> = ({ url, item: { name, img, price, id, count = 1, initPrice = price, type =url }, onClickButton }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
   const { cart } = useTypeSelector(state => state.cart);
 
   const handleClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onClickButton({ name, img, price, id, count, initPrice });
+    onClickButton({ name, img, price, id, count, initPrice, type });
     setIsButtonDisabled(true);
   }
 

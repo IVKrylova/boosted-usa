@@ -12,10 +12,10 @@ import Cart from '../Cart/Cart';
 import FaqList from '../FaqList/FaqList';
 import CatalogAccessories from '../CatalogAccessories/CatalogAccessories';
 import CatalogGiftCard from '../CatalogGiftCard/CatalogGiftCard';
+import SoloItem from '../SoloItem/SoloItem';
 import { Item } from '../../types/types';
 import './App.scss';
-import UnitOfGood from '../SoloItem/SoloItem';
-import SoloItem from '../SoloItem/SoloItem';
+
 
 const App: FC = () => {
   const { cart } = useTypeSelector(state => state.cart);
@@ -58,7 +58,7 @@ const App: FC = () => {
   }, [isItemDeleted]);
 
   useEffect(() => {
-    getCartFromStorage(JSON.parse(localStorage.cart));
+    if (localStorage.cart) getCartFromStorage(JSON.parse(localStorage.cart));
   }, [])
 
   return (
