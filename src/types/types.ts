@@ -12,3 +12,10 @@ export interface Item {
   count: number,
   initPrice: number
 }
+
+export interface SoloItemType {
+  id: number,
+  price: number,
+  name: string,
+  img: string
+}

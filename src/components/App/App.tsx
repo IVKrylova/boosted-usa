@@ -12,11 +12,10 @@ import Cart from '../Cart/Cart';
 import FaqList from '../FaqList/FaqList';
 import CatalogAccessories from '../CatalogAccessories/CatalogAccessories';
 import CatalogGiftCard from '../CatalogGiftCard/CatalogGiftCard';
-import ItemScooter from '../ItemScooter/ItemScooter';
-import ItemAccessory from '../ItemAccessory/ItemAccessory';
-import ItemGiftCard from '../ItemGiftCard/ItemGiftCard';
 import { Item } from '../../types/types';
 import './App.scss';
+import UnitOfGood from '../SoloItem/SoloItem';
+import SoloItem from '../SoloItem/SoloItem';
 
 const App: FC = () => {
   const { cart } = useTypeSelector(state => state.cart);
@@ -80,7 +79,11 @@ const App: FC = () => {
         />
         <Route
           path='/catalog/:id'
-          element={<ItemScooter />}
+          element={
+            <SoloItem
+              type='catalog'
+            />
+          }
         />
         <Route
           path='/accessories'
@@ -92,7 +95,11 @@ const App: FC = () => {
         />
         <Route
           path='/accessories/:id'
-          element={<ItemAccessory />}
+          element={
+            <SoloItem
+              type='catalogAccessories'
+            />
+          }
         />
         <Route
           path='/gift-card'
@@ -104,7 +111,10 @@ const App: FC = () => {
         />
         <Route
           path='/gift-card/:id'
-          element={<ItemGiftCard />}
+          element={
+            <SoloItem
+              type='giftCard'
+            />}
         />
         <Route
           path='/more-info'
