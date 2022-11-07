@@ -150,5 +150,13 @@
       "price": "100",
       "id": "23"
     }
+  ],
+  "users": [
+    {
+      "name": "User",
+      "id": 1,
+      "img": "https://img.freepik.com/free-vector/cute-cat-gaming-cartoon_138676-2969.jpg?w=740&t=st=1667819314~exp=1667819914~hmac=a880fbf0d369540fec93430215bdb82bfd96c0ef03eab63b5a4aaa92870527e7",
+      "email": "user@test.com"
+    }
   ]
 }

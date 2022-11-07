@@ -16,7 +16,6 @@ import SoloItem from '../SoloItem/SoloItem';
 import { Item } from '../../types/types';
 import './App.scss';
 
-
 const App: FC = () => {
   const { cart } = useTypeSelector(state => state.cart);
   const { addToCart, deleteFromCart, changeItem, getCartFromStorage } = useActions();
