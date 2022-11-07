@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { SoloItemType, Item } from '../../types/types';
 import axios from 'axios';
 import styles from './SoloItem.module.scss';
@@ -18,8 +18,11 @@ const SoloItem: FC<SoloItemProps> = ({ type, onClickButton }) => {
   const [message, setMessage] = useState<string>('');
   const [item, setItem] = useState<SoloItemType>({id: 0, price: 0, name: '', img: ''});
   const { cart } = useTypeSelector(state => state.cart);
-  const params = useParams();
+  const params = useParams<string>();
   const id: number = Number(params.id?.slice(1));
+  const navigate = useNavigate();
+
+  const goBack: () => void = () => navigate(-1);
 
   useEffect(() => {
     axios.get(`http://localhost:3001/${type}/${id}`)
@@ -37,7 +40,7 @@ const SoloItem: FC<SoloItemProps> = ({ type, onClickButton }) => {
     if (cart.some(el => el.id === item.id)) setIsButtonDisabled(true);
   }, [item]);
 
-  const handleClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClickButton = (evt: React.MouseEvent<HTMLButtonElement>) => {
     onClickButton({
       name: item.name,
       img: item.img,
@@ -50,6 +53,10 @@ const SoloItem: FC<SoloItemProps> = ({ type, onClickButton }) => {
     setIsButtonDisabled(true);
   }
 
+  const handleClickGoBack = (evt: React.MouseEvent<HTMLButtonElement>) => {
+    goBack();
+  }
+
   return (
     <main className={styles.item}>
       {loading ?
@@ -57,6 +64,9 @@ const SoloItem: FC<SoloItemProps> = ({ type, onClickButton }) => {
           isLoading={loading}
         />
         : <>
+          <button type='button' onClick={handleClickGoBack} className={styles.item__buttonBack}>
+            Go back
+          </button>
           <img src={item.img} alt={item.name} className={styles.item__img} />
           <h1 className={styles.item__name}>{item.name}</h1>
           <p className={styles.item__price}>{`${item.price} $`}</p>

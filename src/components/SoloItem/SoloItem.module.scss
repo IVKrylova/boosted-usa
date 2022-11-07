@@ -6,6 +6,48 @@
   width: 100%;
   justify-items: center;
 
+  .item__buttonBack {
+    justify-self: start;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    padding: 5px 10px;
+    color: #ed8530;
+    border: 1px solid #2c2c2b;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: .3s linear;
+  }
+
+  .item__buttonBack:before, .item__buttonBack:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    transition: .3s linear;
+  }
+
+  .item__buttonBack:before {
+    left: -1px;
+    top: -1px;
+    border-left: 1px solid #ff7c4d;
+    border-top: 1px solid #ff7c4d;
+  }
+
+  .item__buttonBack:after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid #ff7c4d;
+    border-right: 1px solid #ff7c4d;
+  }
+
+  .item__buttonBack:hover {
+    color: #ff7c4d;
+    border-color: #ff7c4d;
+    cursor: pointer;
+  }
+
   .item__img {
     width: 100%;
     max-width: 300px;
