@@ -5,7 +5,11 @@ import user from '../../images/icon-user.svg';
 import cart from '../../images/icon-cart.svg';
 import styles from './Header.module.scss';
 
-const Header: FC = () => {
+interface HeaderProps {
+  amountCart: number;
+}
+
+const Header: FC<HeaderProps> = ({ amountCart }) => {
   return (
     <header className={styles.header}>
       <p className={styles.header__message}>
@@ -52,6 +56,7 @@ const Header: FC = () => {
         <li>
           <Link to='/cart' className={styles.account__link}>
             <img className={styles.account__icon} src={cart} alt='icon cart' />
+            <p className={styles.account__cartCount}>{amountCart}</p>
           </Link>
         </li>
       </ul>

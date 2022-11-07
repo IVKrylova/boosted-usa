@@ -74,11 +74,21 @@
 
     .account__link {
       text-decoration: none;
+      position: relative;
     }
 
     .account__link:hover {
       cursor: pointer;
       opacity: .5;
+    }
+
+    .account__cartCount {
+      margin: 0;
+      padding: 0;
+      color: $colorTitleItem;
+      position: absolute;
+      top: -13px;
+      right: -5px;
     }
   }
 }

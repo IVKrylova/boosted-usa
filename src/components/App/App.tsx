@@ -22,6 +22,7 @@ const App: FC = () => {
   const { addToCart, deleteFromCart, changeItem, getCartFromStorage } = useActions();
   const [isItemAdded, setIsItemAdded] = useState<boolean>(false);
   const [isItemDeleted, setIsItemDeleted] = useState<boolean>(false);
+  const [amountCart, setAmountCart] = useState<number>(0);
 
   const handleClickAddToCart = (item: Item) => {
     addToCart(item);
@@ -59,11 +60,17 @@ const App: FC = () => {
 
   useEffect(() => {
     if (localStorage.cart) getCartFromStorage(JSON.parse(localStorage.cart));
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    setAmountCart(cart.length);
+  }, [cart]);
 
   return (
     <div className='app'>
-      <Header />
+      <Header
+        amountCart={amountCart}
+      />
       <Routes>
         <Route
           path='/'
