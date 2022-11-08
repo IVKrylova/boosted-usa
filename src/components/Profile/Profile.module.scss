@@ -1,0 +1,73 @@
+@import '../../utils/styles/mixins';
+
+.profile {
+  display: grid;
+  row-gap: 30px;
+  max-width: 300px;
+  width: 100%;
+  justify-items: center;
+
+  .form {
+    display: grid;
+    row-gap: 10px;
+    max-width: 300px;
+    width: 100%;
+
+    .form__input {
+      box-sizing: border-box;
+      display: block;
+      border: none;
+      border-bottom: 1px solid #f16b18;
+    }
+
+    .form__input_type_error {
+      border-bottom: 1px solid #FF0000;
+    }
+
+    .form__input_hidden {
+      display: none;
+    }
+
+    .form__error {
+      font-size: 12px;
+      line-height: 15px;
+      color: #FF0000;
+      margin-top: 5px;
+      display: none;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .form__error_active {
+      display: block;
+    }
+
+    .form__button {
+      padding: 0;
+      justify-self: center;
+      width: 100px;
+      padding: 5px;
+      margin: 0;
+      color: #eb6b0f;
+      background-color: transparent;
+      border: #eb6b0f solid 1px;
+    }
+
+    .form__button:hover {
+      @include hover;
+    }
+  }
+
+  .profile__img {
+    width: 150px;
+  }
+
+  .profile__img_hidden {
+    display: none;
+  }
+
+  .profile__form_hidden {
+    display: none;
+  }
+
+}

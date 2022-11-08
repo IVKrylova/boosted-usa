@@ -19,3 +19,16 @@ export const fetchUser = (id: number) => {
     }
   }
 }
+
+export const editAvatar = (url: string, id: number) => {
+  return async (dispatch: Dispatch<UserAction>) => {
+    try {
+      await axios.patch(`http://localhost:3001/users/${id}`, {img: url});
+    } catch (err) {
+      dispatch({
+        type: UserActionTypes.FETCH_USER_ERROR,
+        payload: 'Произошла ошибка при обновлении аватара',
+      });
+    }
+  }
+}
