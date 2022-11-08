@@ -56,6 +56,11 @@
     .form__button:hover {
       @include hover;
     }
+
+    .form__button_disabled:hover {
+      cursor: default;
+      opacity: 1;
+    }
   }
 
   .profile__img {
@@ -69,5 +74,4 @@
   .profile__form_hidden {
     display: none;
   }
-
 }

@@ -71,7 +71,11 @@ const Profile: FC = () => {
             <span className={`${styles.form__error} ${!isValid ? styles.form__error_active : ''}`}>
               {!isValid && errors.url}
             </span>
-            <button className={styles.form__button} type='submit'>
+            <button
+              className={`${styles.form__button} ${isValid ? '' : styles.form__button_disabled}`}
+              type='submit'
+              disabled={!isValid}
+            >
               {isEditAvatarPressed ? 'Save' : 'Edit Avatar'}
             </button>
           </form>
@@ -101,7 +105,13 @@ const Profile: FC = () => {
             <span className={`${styles.form__error} ${!isValid ? styles.form__error_active : ''}`}>
               {!isValid && errors.email}
             </span>
-            <button className={styles.form__button} type='submit'>Edit Profile</button>
+            <button
+              className={`${styles.form__button} ${isValid ? '' : styles.form__button_disabled}`}
+              type='submit'
+              disabled={!isValid}
+            >
+              Edit Profile
+            </button>
           </form>
         </>
       }
