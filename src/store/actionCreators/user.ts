@@ -20,10 +20,15 @@ export const fetchUser = (id: number) => {
   }
 }
 
-export const editAvatar = (url: string, id: number) => {
+export const editAvatar = (id: number, url?: string) => {
   return async (dispatch: Dispatch<UserAction>) => {
     try {
-      await axios.patch(`http://localhost:3001/users/${id}`, {img: url});
+      const user = await axios.patch(`http://localhost:3001/users/${id}`, {img: url});
+      dispatch({
+        type: UserActionTypes.EDIT_AVATAR,
+        payload: user.data,
+      });
+
     } catch (err) {
       dispatch({
         type: UserActionTypes.FETCH_USER_ERROR,

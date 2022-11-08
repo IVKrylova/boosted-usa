@@ -13,7 +13,7 @@ export enum UserActionTypes {
   FETCH_USER = 'FETCH_USER',
   FETCH_USER_ERROR = 'FETCH_USER_ERROR',
   FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS',
-  /* EDIT_AVATAR = 'EDIT_AVATAR', */
+  EDIT_AVATAR = 'EDIT_AVATAR',
   EDIT_AVATAR_ERROR = 'EDIT_AVATAR_ERROR',
 }
 
@@ -31,13 +31,14 @@ interface FetchUserErrorAction {
   payload: string;
 }
 
-/* interface EditAvatarAction {
+interface EditAvatarAction {
   type: UserActionTypes.EDIT_AVATAR;
-} */
+  payload: { name: string, id: number, img: string, email: string };
+}
 
 interface EditAvatarErrorAction {
   type: UserActionTypes.EDIT_AVATAR_ERROR;
   payload: string;
 }
 
-export type UserAction = FetchUserAction | FetchUserErrorAction | FetchUserSuccessAction | /* EditAvatarAction | */ EditAvatarErrorAction;
+export type UserAction = FetchUserAction | FetchUserErrorAction | FetchUserSuccessAction | EditAvatarAction | EditAvatarErrorAction;

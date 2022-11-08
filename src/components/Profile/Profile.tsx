@@ -25,7 +25,7 @@ const Profile: FC = () => {
     evt.preventDefault();
 
     if (isEditAvatarPressed) {
-
+      editAvatar(USER_ID, values.url);
     }
 
     toggleEditAvatarButton();

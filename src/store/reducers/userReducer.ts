@@ -14,10 +14,10 @@ export const userReducer = (state = initialState, action: UserAction): UserState
       return { user: action.payload, error: null, loading: false }
     case UserActionTypes.FETCH_USER_ERROR:
       return { user: null, error: action.payload, loading: false }
-    /* case UserActionTypes.EDIT_AVATAR:
-      return { loading: false, error: null, user: null } */
+    case UserActionTypes.EDIT_AVATAR:
+      return { ...state, user: action.payload }
     case UserActionTypes.EDIT_AVATAR_ERROR:
-      return { user: null, error: action.payload, loading: false }
+      return { ...state, error: action.payload }
     default:
       return state;
   }
