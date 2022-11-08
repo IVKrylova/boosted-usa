@@ -9,7 +9,7 @@ import styles from './Profile.module.scss';
 
 const Profile: FC = () => {
   const { user, error, loading } = useTypeSelector(state => state.user);
-  const { fetchUser, editAvatar } = useActions();
+  const { fetchUser, editAvatar, editProfile } = useActions();
   const [isEditAvatarPressed, setIsEditAvatarPressed] = useState<boolean>(false);
   const { values, handleChange, errors, isValid, setValues, setErrors, setIsValid } = useFormAndValidation();
 
@@ -21,7 +21,7 @@ const Profile: FC = () => {
     isEditAvatarPressed ? setIsEditAvatarPressed(false) : setIsEditAvatarPressed(true);
   }
 
-  const handleClickEditAvatar = (evt: React.FormEvent<HTMLFormElement>) => {
+  const handleEditAvatar = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
 
     if (isEditAvatarPressed) {
@@ -29,6 +29,12 @@ const Profile: FC = () => {
     }
 
     toggleEditAvatarButton();
+  }
+
+  const handleEditProfile = (evt: React.FormEvent<HTMLFormElement>) => {
+    evt.preventDefault();
+
+    editProfile(USER_ID, values.name, values.email);
   }
 
   useEffect(() => {
@@ -52,7 +58,7 @@ const Profile: FC = () => {
         /> :
         <>
           <img className={`${styles.profile__img} ${classImage}`} src={user?.img} alt={user?.name} />
-          <form className={`${styles.form} ${classFormEditInfo}`} onSubmit={handleClickEditAvatar} noValidate>
+          <form className={`${styles.form} ${classFormEditInfo}`} onSubmit={handleEditAvatar} noValidate>
             <input
               type='url'
               name='url'
@@ -69,7 +75,7 @@ const Profile: FC = () => {
               {isEditAvatarPressed ? 'Save' : 'Edit Avatar'}
             </button>
           </form>
-          <form className={`${styles.form} ${classFormEditInfo}`} noValidate>
+          <form className={`${styles.form} ${classFormEditInfo}`} noValidate onSubmit={handleEditProfile}>
             <input
               type='text'
               name='name'
@@ -95,7 +101,7 @@ const Profile: FC = () => {
             <span className={`${styles.form__error} ${!isValid ? styles.form__error_active : ''}`}>
               {!isValid && errors.email}
             </span>
-            <button className={styles.form__button}>Edit Profile</button>
+            <button className={styles.form__button} type='submit'>Edit Profile</button>
           </form>
         </>
       }

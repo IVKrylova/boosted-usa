@@ -31,8 +31,26 @@ export const editAvatar = (id: number, url?: string) => {
 
     } catch (err) {
       dispatch({
-        type: UserActionTypes.FETCH_USER_ERROR,
+        type: UserActionTypes.EDIT_AVATAR_ERROR,
         payload: 'Произошла ошибка при обновлении аватара',
+      });
+    }
+  }
+}
+
+export const editProfile = (id: number, name?: string, email?: string) => {
+  return async (dispatch: Dispatch<UserAction>) => {
+    try {
+      const user = await axios.patch(`http://localhost:3001/users/${id}`, {name: name, email: email});
+      dispatch({
+        type: UserActionTypes.EDIT_PROFILE,
+        payload: user.data,
+      });
+
+    } catch (err) {
+      dispatch({
+        type: UserActionTypes.EDIT_PROFILE_ERROR,
+        payload: 'Произошла ошибка при обновлении профиля',
       });
     }
   }

@@ -18,6 +18,10 @@ export const userReducer = (state = initialState, action: UserAction): UserState
       return { ...state, user: action.payload }
     case UserActionTypes.EDIT_AVATAR_ERROR:
       return { ...state, error: action.payload }
+    case UserActionTypes.EDIT_PROFILE:
+      return { ...state, user: action.payload }
+    case UserActionTypes.EDIT_PROFILE_ERROR:
+      return { ...state, error: action.payload }
     default:
       return state;
   }
