@@ -17,3 +17,33 @@
   background-color: transparent;
   padding: 0;
 }
+
+@mixin media_1200 {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media_930 {
+  @media screen and (max-width: 930px) {
+    @content;
+  }
+}
+
+@mixin media_740 {
+  @media screen and (max-width: 740px) {
+    @content;
+  }
+}
+
+@mixin media_590 {
+  @media screen and (max-width: 590px) {
+    @content;
+  }
+}
+
+@mixin media_440 {
+  @media screen and (max-width: 440px) {
+    @content;
+  }
+}

@@ -16,7 +16,7 @@ const Shop: FC = () => {
         />
         <ItemShop
           title='Shop Boosted Mini'
-          modifier={styles.linksList__item_place_mini}
+          modifier={`${styles.linksList__item_place_mini} ${styles.linksList__item_plase_third}`}
         />
       </ul>
     </section>

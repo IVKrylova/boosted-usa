@@ -8,6 +8,11 @@
   justify-self: center;
   align-self: end;
 
+  @include media_930 {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
   .footer__text {
     margin: 20px 0 20px 10px;
     font-style: normal;
@@ -15,6 +20,10 @@
     font-size: 13px;
     line-height: 1.44;
     color: #000000;
+
+    @include media_930 {
+      margin-bottom: 0;
+    }
 
     .footer__link {
       text-decoration: none;
@@ -32,6 +41,16 @@
     column-gap: 5px;
     margin: 20px 10px 20px 0;
     padding: 0;
+
+    @include media_930 {
+      margin: 0 0 10px 10px;
+    }
+
+    @include media_440 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: start;
+    }
 
     .footer__paymentSystem {
       width: 38px;

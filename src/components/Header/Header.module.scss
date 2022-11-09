@@ -9,6 +9,28 @@
   @include width($widthPages);
   height: min-content;
 
+  @include media_930 {
+    grid-template-areas:
+      'message message message'
+      'logo account account'
+      'navMenu navMenu navMenu';
+  }
+
+  @include media_590 {
+    grid-template-areas:
+      'message message message'
+      'menuIcon logo account'
+      'navMenu navMenu navMenu';
+  }
+
+  @include media_440 {
+    grid-template-areas:
+      'message message message'
+      'logo logo logo'
+      'menuIcon menuIcon account'
+      'navMenu navMenu navMenu';
+  }
+
   .header__message {
     grid-area: message;
     background-color: $backgroundDark;
@@ -31,6 +53,15 @@
     height: 36px;
     display: block;
     margin: 15px 0 15px 11px;
+
+    @include media_590 {
+      margin-left: 0;
+      justify-self: center;
+    }
+
+    @include media_440 {
+      margin: 10px 0 0;
+    }
   }
 
   .navMenu {
@@ -49,6 +80,23 @@
       letter-spacing: 1px;
       margin: 0;
 
+      @include media_1200 {
+        font-size: 12px;
+      }
+
+      @include media_930 {
+        justify-content: space-around;
+        margin-bottom: 15px;
+      }
+
+      @include media_740 {
+        font-size: 10px;
+      }
+
+      @include media_590 {
+        display: none;
+      }
+
       .navMenu__item {
         .navMenu__link {
           color: $fontColorDark;
@@ -60,6 +108,30 @@
         }
       }
     }
+
+    .navMenu__list_visible {
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+      margin-left: 15px;
+    }
+  }
+
+  .menuIcon {
+    display: none;
+    margin: 20px 0 0 15px;
+
+    @include media_590 {
+      display: block;
+    }
+
+    @include media_440 {
+      margin: 0 0 5px 15px;
+    }
+  }
+
+  .menuIcon:hover {
+    @include hover;
   }
 
   .account {

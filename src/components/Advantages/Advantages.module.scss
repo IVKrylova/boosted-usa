@@ -1,3 +1,5 @@
+@import '../../utils/styles/mixins';
+
 .advantages {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 2px 0px 10px rgba(41, 44, 61, 0.34);
@@ -7,11 +9,26 @@
     margin: 60px auto 0;
     background-color: #000;
     padding: 0;
-    display: flex;
+    display: grid;
     column-gap: 20px;
-    justify-content: center;
+    justify-items: center;
     list-style-type: none;
     color: #fff;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include media_930 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media_590 {
+      margin-top: 30px;
+      padding: 0 10px;
+      column-gap: 20px;
+    }
+
+    @include media_440 {
+      grid-template-columns: 1fr;
+    }
   }
 
   .advantage {
@@ -21,10 +38,28 @@
     grid-template-columns: 1fr;
     justify-content: center;
 
+    @include media_1200 {
+      max-width: 250px;
+    }
+
     .advantage__logo {
       width: 87px;
       height: 87px;
       margin: 30px auto 0;
+
+      @include media_1200 {
+        width: 50px;
+        height: 50px;
+      }
+
+      @include media_740 {
+        height: 30px;
+        width: 30px;
+      }
+
+      @include media_440 {
+        margin-top: 10px;
+      }
     }
 
     .advantage__title {
@@ -34,6 +69,15 @@
       line-height: 1.16px;
       text-align: center;
       margin: 5px auto 0;
+
+      @include media_1200 {
+        font-size: 26px;
+        margin-top: 10px;
+      }
+
+      @include media_740 {
+        font-size: 20px;
+      }
     }
 
     .advantage__text {
@@ -45,6 +89,18 @@
       margin: 25px auto 35px;
       width: 100%;
       max-width: 290px;
+
+      @include media_740 {
+        font-size: 14px;
+      }
+
+      @include media_440 {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include media_1200 {
+      font-size: 12px;
     }
   }
 

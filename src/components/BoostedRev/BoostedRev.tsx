@@ -12,7 +12,7 @@ const BoostedRev: FC = () => {
         <li className={styles.imagesList__item}>
           <img className={styles.imagesList__image} src={womanOnRev} alt='woman on the rev' />
         </li>
-        <li className={styles.imagesList__item}>
+        <li className={`${styles.imagesList__item} ${styles.imagesList__item_hidden}`}>
           <img className={styles.imagesList__image} src={speedRev} alt='the speed of the rev' />
         </li>
       </ul>

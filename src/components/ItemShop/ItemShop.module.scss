@@ -8,6 +8,11 @@
   flex-direction: column;
   align-items: center;
 
+  @include media_1200 {
+    width: 100%;
+    max-width: 300px;
+  }
+
   .linksList__title {
     width: 100%;
     max-width: 241px;
@@ -17,6 +22,11 @@
     text-align: center;
     color: $fontColorLight;
     margin: 208px auto 0;
+
+    @include media_1200 {
+      margin-top: 130px;
+      font-size: 20px;
+    }
   }
 
   .linksList__link {
@@ -30,6 +40,10 @@
     color: $fontColorLight;
     text-decoration: none;
     margin: 15px auto 203px;
+
+    @include media_1200 {
+      margin-bottom: 70px;
+    }
   }
 
   .linksList__link:hover {

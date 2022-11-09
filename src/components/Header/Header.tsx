@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/header-logo.svg';
 import user from '../../images/icon-user.svg';
 import cart from '../../images/icon-cart.svg';
+import menuIcon from '../../images/menu-icon.png';
 import styles from './Header.module.scss';
 
 interface HeaderProps {
   amountCart: number;
+  onClickIconMenu: (evt: React.MouseEvent<HTMLImageElement>) => void;
+  isMobileMenuVisible: boolean;
 }
 
-const Header: FC<HeaderProps> = ({ amountCart }) => {
+const Header: FC<HeaderProps> = ({ amountCart, onClickIconMenu, isMobileMenuVisible }) => {
   return (
     <header className={styles.header}>
       <p className={styles.header__message}>
@@ -19,7 +22,7 @@ const Header: FC<HeaderProps> = ({ amountCart }) => {
         <img src={logo} alt='logotype' />
       </Link>
       <nav className={styles.navMenu}>
-        <ul className={styles.navMenu__list}>
+        <ul className={`${styles.navMenu__list} ${isMobileMenuVisible ? styles.navMenu__list_visible : ''}`}>
           <li className={styles.navMenu__item}>
             <Link to='/catalog' className={styles.navMenu__link}>
               Electric Skateboards
@@ -47,6 +50,7 @@ const Header: FC<HeaderProps> = ({ amountCart }) => {
           </li>
         </ul>
       </nav>
+      <img src={menuIcon} alt='icon menu' className={styles.menuIcon} onClick={onClickIconMenu} />
       <ul className={styles.account}>
         <li>
           <Link to='/profile' className={styles.account__link}>

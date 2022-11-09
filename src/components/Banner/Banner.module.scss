@@ -19,6 +19,10 @@
     color: $fontColorDark;
     margin: 53px auto 0;
     width: 100%;
+
+    @include media_740 {
+      font-size: 30px;
+    }
   }
 
   .banner__subtitle {
@@ -31,6 +35,14 @@
     color: $fontColorDark;
     max-width: 537px;
     margin: 14px auto 0;
+
+    @include media_740 {
+      font-size: 14px;
+    }
+
+    @include media_590 {
+      max-width: 310px;
+    }
   }
 
   .banner__buttonsList {
@@ -39,5 +51,19 @@
     list-style-type: none;
     display: flex;
     column-gap: 12px;
+
+    @include media_930 {
+      margin-bottom: 400px;
+    }
+
+    @include media_590 {
+      margin-bottom: 220px;
+    }
+
+    @include media_440 {
+      flex-direction: column;
+      row-gap: 10px;
+      margin-bottom: 150px;
+    }
   }
 }

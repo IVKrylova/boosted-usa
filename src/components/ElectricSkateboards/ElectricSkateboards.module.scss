@@ -13,6 +13,14 @@
   padding-bottom: 505px;
   box-sizing: border-box;
 
+  @include media_740 {
+    padding-bottom: 250px;
+  }
+
+  @include media_590 {
+    padding-bottom: 100px;
+  }
+
   .text {
     font-style: normal;
     font-weight: 400;
@@ -22,18 +30,30 @@
     letter-spacing: 1px;
     color: $fontColorDark;
     padding: 0;
+
+    @include media_740 {
+      font-size: 14px;
+    }
   }
 
   .text_place_top {
     margin: 44px auto 0;
     width: 100%;
     max-width: 143px;
+
+    @include media_590 {
+      margin-top: 25px;
+    }
   }
 
   .text_place_bottom {
     width: 100%;
     max-width: 488px;
     margin: 15px auto 20px;
+
+    @include media_590 {
+      max-width: 300px;
+    }
   }
 
   .title {
@@ -46,5 +66,9 @@
     text-align: center;
     color: $fontColorDark;
     margin: 11px auto 0;
+
+    @include media_740 {
+      font-size: 30px;
+    }
   }
 }

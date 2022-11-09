@@ -22,6 +22,7 @@ const App: FC = () => {
   const [isItemAdded, setIsItemAdded] = useState<boolean>(false);
   const [isItemDeleted, setIsItemDeleted] = useState<boolean>(false);
   const [amountCart, setAmountCart] = useState<number>(0);
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState<boolean>(false);
 
   const handleClickAddToCart = (item: Item) => {
     addToCart(item);
@@ -41,6 +42,10 @@ const App: FC = () => {
   const handleClickMinus = (id: number, count: number) => {
     changeItem(id, count);
     localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  const handleClickIconMenu = (evt: React.MouseEvent<HTMLImageElement>) => {
+    isMobileMenuVisible ? setIsMobileMenuVisible(false) : setIsMobileMenuVisible(true);
   }
 
   useEffect(() => {
@@ -69,6 +74,8 @@ const App: FC = () => {
     <div className='app'>
       <Header
         amountCart={amountCart}
+        onClickIconMenu={handleClickIconMenu}
+        isMobileMenuVisible={isMobileMenuVisible}
       />
       <Routes>
         <Route

@@ -1,4 +1,5 @@
 @import '../../utils/styles/constants';
+@import '../../utils/styles/mixins';
 
 .boostedRev {
   width: 100%;
@@ -8,18 +9,46 @@
   box-sizing: border-box;
   padding: 0 9%;
 
+  @include media_740 {
+    column-gap: 20px;
+    padding: 0 15px;
+  }
+
   .imagesList {
     padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
     column-gap: 20px;
+
+    @include media_1200 {
+      flex-direction: column;
+      row-gap: 15px;
+
+      .imagesList__item_hidden {
+        display: none;
+      }
+    }
+
+    .imagesList__image {
+      @include media_740 {
+        width: 200px;
+      }
+
+      @include media_440 {
+        display: none;
+      }
+    }
   }
 
   .description {
     display: flex;
     flex-direction: column;
     margin-top: 67px;
+
+    @include media_930 {
+      margin-top: 0;
+    }
 
     .title {
       margin: 0;
@@ -30,6 +59,14 @@
       font-size: 32px;
       line-height: 1.2;
       color: $fontColorDark;
+
+      @include media_930 {
+        font-size: 26px;
+      }
+
+      @include media_740 {
+        font-size: 22px;
+      }
     }
 
     .text {
@@ -41,6 +78,11 @@
       font-size: 15px;
       line-height: 1.5;
       color: $fontColorDark;
+
+      @include media_740 {
+        font-size: 14px;
+        max-width: 500px;
+      }
     }
 
     .button_plase_boostedRev {
