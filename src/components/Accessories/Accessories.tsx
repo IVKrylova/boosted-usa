@@ -8,17 +8,21 @@ import styles from './Accessories.module.scss';
 const Accessories: FC = () => {
   // настройка слайдера
   const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
     desktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 7
+      breakpoint: { max: 2999, min: 1024 },
+      items: 5,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 4
+      breakpoint: { max: 1023, min: 591 },
+      items: 3,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
+      breakpoint: { max: 590, min: 0 },
+      items: 1,
     }
   };
 
@@ -39,7 +43,7 @@ const Accessories: FC = () => {
             <div key={item.id} className={styles.accessory}>
               <img alt={item.name} src={item.img} className={styles.accessory__img} />
               <h3 className={styles.accessory__name}>
-                <Link className={styles.accessory__link} to={`/catalog:${item.id}`}>
+                <Link className={styles.accessory__link} to='/accessories'>
                   {item.name}
                 </Link>
               </h3>
