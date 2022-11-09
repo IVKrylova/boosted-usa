@@ -1,7 +1,26 @@
+@import '../../utils/styles/mixins';
+
 .moreInfo {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
+  max-width: 1170px;
+
+  @include media_1200 {
+    max-width: 880px;
+  }
+
+  @include media_930 {
+    max-width: 680px;
+  }
+
+  @include media_740 {
+    max-width: 520px;
+  }
+
+  @include media_590 {
+    max-width: 280px;
+  }
 
   .moreInfo__title {
     margin: 20px auto 0;
@@ -14,12 +33,21 @@
   }
 
   .text {
-    margin: 15px 15px 0;
+    margin: 15px 10px 0;
     width: 100%;
+
+    @include media_590 {
+      margin: 15px 5px 0;
+    }
   }
 
   .contact__address {
     margin: 15px 15px 0;
     width: 100%;
+
+    @include media_590 {
+      margin: 15px 5px 0;
+      max-width: 280px;
+    }
   }
 }
