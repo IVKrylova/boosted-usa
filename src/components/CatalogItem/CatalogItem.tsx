@@ -14,7 +14,7 @@ const CatalogItem: FC<CatalogItemProps> = ({ url, item: { name, img, price, id, 
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
   const { cart } = useTypeSelector(state => state.cart);
 
-  const handleClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClickButton = (evt: React.MouseEvent<HTMLButtonElement>) => {
     onClickButton({ name, img, price, id, count, initPrice, type });
     setIsButtonDisabled(true);
   }

@@ -27,10 +27,12 @@ const FaqList: FC = () => {
       <List
         classList={styles.faq__list}
         items={faqList}
-        renderItem={faq => <FaqItem
-          item={faq}
-          key={faq.id}
-        />}
+        renderItem={faq =>
+          <FaqItem
+            item={faq}
+            key={faq.id}
+          />
+        }
       />
 
 
