@@ -1,0 +1,12 @@
+@import '../../utils/styles/mixins';
+
+.videoItem {
+  &__video {
+    border: none;
+
+    @include media_590 {
+      width: 300px;
+      height: auto;
+    }
+  }
+}
