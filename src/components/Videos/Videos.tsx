@@ -7,10 +7,12 @@ const Videos: FC = () => {
     <section className={styles.videos}>
       <ul className={styles.videosList}>
         <Video
-          url='https://www.youtube.com/embed/JqyzwbpYYqc'
+          videoId='JqyzwbpYYqc'
+          name='Boosted Rev: The Tesla of Electric Scooters!'
         />
         <Video
-          url='https://www.youtube.com/embed/78bXV1ZqQWI'
+          videoId='78bXV1ZqQWI'
+          name='Introducing Boosted Rev'
         />
       </ul>
     </section>
