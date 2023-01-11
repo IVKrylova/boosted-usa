@@ -13,6 +13,10 @@
     column-gap: 20px;
     justify-items: center;
 
+    @include media_1230 {
+      column-gap: 15px;
+    }
+
     @include media_740 {
       column-gap: 10px;
     }
