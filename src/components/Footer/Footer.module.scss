@@ -13,7 +13,7 @@
     row-gap: 20px;
   }
 
-  .footer__text {
+  &__text {
     margin: 20px 0 20px 10px;
     font-style: normal;
     font-weight: 400;
@@ -24,18 +24,18 @@
     @include media_930 {
       margin-bottom: 0;
     }
+  }
 
-    .footer__link {
-      text-decoration: none;
-      color: #ff4a32;
-    }
+  &__link {
+    text-decoration: none;
+    color: #ff4a32;
 
-    .footer__link:hover {
+    &:hover {
       @include hover;
     }
   }
 
-  .footer__paymentSystems {
+  &__paymentSystems {
     list-style-type: none;
     display: flex;
     column-gap: 5px;
@@ -51,11 +51,11 @@
       grid-template-columns: repeat(4, 1fr);
       justify-items: start;
     }
+  }
 
-    .footer__paymentSystem {
-      width: 38px;
-      height: 24px;
-      display: block;
-    }
+  &__paymentSystem {
+    width: 38px;
+    height: 24px;
+    display: block;
   }
 }

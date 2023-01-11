@@ -10,7 +10,7 @@
   padding: 15px;
   align-items: center;
 
-  .cartItem__img {
+  &__img {
     width: 100%;
     max-width: 150px;
     grid-column: 1 / 2;
@@ -23,7 +23,7 @@
     }
   }
 
-  .cartItem__name {
+  &__name {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     margin: 0;
@@ -43,16 +43,16 @@
     }
   }
 
-  .cartItem__link {
+  &__link {
     color: inherit;
     text-decoration: none;
   }
 
-  .cartItem__link:hover {
+  &__link:hover {
     @include hover;
   }
 
-  .cartItem__price {
+  &__price {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     margin: 0;
@@ -67,7 +67,7 @@
     }
   }
 
-  .cartItem__count {
+  &__count {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: flex;
@@ -76,38 +76,37 @@
     @include media_590 {
       grid-row: 2 / 3;
     }
+  }
 
-    .cartItem__buttonMinus {
-      background-image: url(../../images/icon-minus.svg);
-      @include buttonCartItem;
-    }
+  &__buttonMinus {
+    background-image: url(../../images/icon-minus.svg);
+    @include buttonCartItem;
 
-    .cartItem__buttonPlus {
-      background-image: url(../../images/icon-plus.svg);
-      @include buttonCartItem;
-
-    }
-
-    .cartItem__buttonPlus:hover {
+    &:hover {
       @include hover;
-    }
-
-    .cartItem__buttonMinus:hover {
-      @include hover;
-    }
-
-    .cartItem__countValue {
-      margin: 0;
-      padding: 0;
-      font-size: 16px;
-
-      @include media_590 {
-        font-size: 14px;
-      }
     }
   }
 
-  .cartItem__totalPrice {
+  &__buttonPlus {
+    background-image: url(../../images/icon-plus.svg);
+    @include buttonCartItem;
+
+    &:hover {
+      @include hover;
+    }
+  }
+
+  &__countValue {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+
+    @include media_590 {
+      font-size: 14px;
+    }
+  }
+
+  &__totalPrice {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     margin: 0;
@@ -122,16 +121,16 @@
     }
   }
 
-  .cartItem__buttonDelete {
+  &__buttonDelete {
     position: absolute;
     top: 15px;
     right: 15px;
     @include buttonCartItem;
     background-image: url(../../images/button-delete.svg);
     height: 20px;
-  }
 
-  .cartItem__buttonDelete:hover {
-    @include hover;
+    &:hover {
+      @include hover;
+    }
   }
 }

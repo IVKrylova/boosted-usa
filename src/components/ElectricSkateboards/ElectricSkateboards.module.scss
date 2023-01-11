@@ -34,25 +34,25 @@
     @include media_740 {
       font-size: 14px;
     }
-  }
 
-  .text_place_top {
-    margin: 44px auto 0;
-    width: 100%;
-    max-width: 143px;
+    &_place_top {
+      margin: 44px auto 0;
+      width: 100%;
+      max-width: 143px;
 
-    @include media_590 {
-      margin-top: 25px;
+      @include media_590 {
+        margin-top: 25px;
+      }
     }
-  }
 
-  .text_place_bottom {
-    width: 100%;
-    max-width: 488px;
-    margin: 15px auto 20px;
+    &_place_bottom {
+      width: 100%;
+      max-width: 488px;
+      margin: 15px auto 20px;
 
-    @include media_590 {
-      max-width: 300px;
+      @include media_590 {
+        max-width: 300px;
+      }
     }
   }
 

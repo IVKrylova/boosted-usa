@@ -15,7 +15,7 @@
     grid-template-columns: 1fr;
   }
 
-  .aboutBoosted__logo {
+  &__logo {
     grid-column: 1 / 2;
     grid-row: 1 / 5;
     margin: 50px auto 0;
@@ -31,7 +31,7 @@
     }
   }
 
-  .aboutBoosted__title {
+  &__title {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -44,7 +44,7 @@
     }
   }
 
-  .aboutBoosted__title_place_links {
+  &__title_place_links {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
@@ -56,7 +56,7 @@
     }
   }
 
-  .aboutBoosted__title_place_text {
+  &__title_place_text {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 
@@ -73,7 +73,7 @@
     }
   }
 
-  .aboutBoosted__links {
+  &__links {
     grid-column: 2 / 3;
     grid-row: 2 / 5;
     padding: 0;
@@ -96,7 +96,7 @@
     }
   }
 
-  .aboutBoosted__link {
+  &__link {
     text-decoration: none;
     color: inherit;
 
@@ -105,11 +105,11 @@
     }
   }
 
-  .aboutBoosted__link:hover {
+  &__link:hover {
     @include hover;
   }
 
-  .aboutBoosted__text {
+  &__text {
     max-width: 367px;
     width: 100%;
     grid-column: 3 / 4;
@@ -134,7 +134,7 @@
     }
   }
 
-  .aboutBoosted__address {
+  &__address {
     margin-top: 19px;
     grid-column: 3 / 4;
     grid-row: 3 / 4;
@@ -157,7 +157,7 @@
     }
   }
 
-  .aboutBoosted__line_newLine {
+  &__line_newLine {
     display: block;
   }
 }

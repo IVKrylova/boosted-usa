@@ -11,18 +11,18 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin-right: 5px;
-  }
 
-  .faq__icon:hover {
-    @include hover;
-  }
+    &:hover {
+      @include hover;
+    }
 
-  .faq__icon_hidden {
-    display: none;
-  }
+    &_hidden {
+      display: none;
+    }
 
-  .faq__icon_visible {
-    display: block;
+    &_visible {
+      display: block;
+    }
   }
 
   .faq__question {
@@ -39,18 +39,18 @@
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     display: none;
+
+    &_visible {
+      display: block;
+    }
   }
 
-  .faq__answer_visible {
+  &::after {
+    content: '';
+    border-bottom: 2px solid #cfcfcf;
+    width: 100%;
     display: block;
+    margin-top: 20px;
+    grid-column: 1 / 3;
   }
-}
-
-.faq__item::after {
-  content: '';
-  border-bottom: 2px solid #cfcfcf;
-  width: 100%;
-  display: block;
-  margin-top: 20px;
-  grid-column: 1 / 3;
 }

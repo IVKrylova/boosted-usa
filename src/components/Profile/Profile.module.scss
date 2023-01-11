@@ -13,22 +13,22 @@
     max-width: 300px;
     width: 100%;
 
-    .form__input {
+    &__input {
       box-sizing: border-box;
       display: block;
       border: none;
       border-bottom: 1px solid #f16b18;
+
+      &_type_error {
+        border-bottom: 1px solid #FF0000;
+      }
+
+      &_hidden {
+        display: none;
+      }
     }
 
-    .form__input_type_error {
-      border-bottom: 1px solid #FF0000;
-    }
-
-    .form__input_hidden {
-      display: none;
-    }
-
-    .form__error {
+    &__error {
       font-size: 12px;
       line-height: 15px;
       color: #FF0000;
@@ -36,13 +36,13 @@
       display: none;
       max-width: 300px;
       width: 100%;
+
+      &_active {
+        display: block;
+      }
     }
 
-    .form__error_active {
-      display: block;
-    }
-
-    .form__button {
+    &__button {
       padding: 0;
       justify-self: center;
       width: 100px;
@@ -51,27 +51,27 @@
       color: #eb6b0f;
       background-color: transparent;
       border: #eb6b0f solid 1px;
-    }
 
-    .form__button:hover {
-      @include hover;
-    }
+      &:hover {
+        @include hover;
+      }
 
-    .form__button_disabled:hover {
-      cursor: default;
-      opacity: 1;
+      &_disabled:hover {
+        cursor: default;
+        opacity: 1;
+      }
     }
   }
 
-  .profile__img {
+  &__img {
     width: 150px;
+
+    &_hidden {
+      display: none;
+    }
   }
 
-  .profile__img_hidden {
-    display: none;
-  }
-
-  .profile__form_hidden {
+  &__form_hidden {
     display: none;
   }
 }

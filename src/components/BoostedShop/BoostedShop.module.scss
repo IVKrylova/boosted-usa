@@ -19,18 +19,18 @@
     text-align: center;
     margin: 52px auto 0;
 
-      @include media_740 {
-        font-size: 26px;
-      }
-
-      @include media_590 {
-        max-width: 350px;
-      }
-
-      @include media_440 {
-        max-width: 300px;
-      }
+    @include media_740 {
+      font-size: 26px;
     }
+
+    @include media_590 {
+      max-width: 350px;
+    }
+
+    @include media_440 {
+      max-width: 300px;
+    }
+  }
 
   .text {
     width: 100%;
@@ -56,14 +56,14 @@
       padding: 0 5px;
       max-width: 280px;
     }
-  }
 
-  .text::after {
-    content: '';
-    border-bottom: solid 2px #cfcfcf;
-    width: 70px;
-    margin: 25px auto 0;
-    display: block;
+    &::after {
+      content: '';
+      border-bottom: solid 2px #cfcfcf;
+      width: 70px;
+      margin: 25px auto 0;
+      display: block;
+    }
   }
 
   .linksList {
@@ -80,11 +80,11 @@
       padding: 0 15px;
     }
 
-    .linksList__item_boards {
+    &__item_boards {
       background-image: url(../../images/boosted-boards.png);
     }
 
-    .linksList__item_revs {
+    &__item_revs {
       background-image: url(../../images/boosted-revs.png);
     }
   }

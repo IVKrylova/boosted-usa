@@ -5,7 +5,7 @@
   box-shadow: 2px 0px 10px rgba(41, 44, 61, 0.34);
   margin-top: 10px;
 
-  .advantages__list {
+  &__list {
     margin: 60px auto 0;
     background-color: #000;
     padding: 0;
@@ -42,7 +42,7 @@
       max-width: 250px;
     }
 
-    .advantage__logo {
+    &__logo {
       width: 87px;
       height: 87px;
       margin: 30px auto 0;
@@ -62,7 +62,7 @@
       }
     }
 
-    .advantage__title {
+    &__title {
       font-style: normal;
       font-weight: 700;
       font-size: 31px;
@@ -80,7 +80,7 @@
       }
     }
 
-    .advantage__text {
+    &__text {
       font-style: normal;
       font-weight: 400;
       font-size: 15px;

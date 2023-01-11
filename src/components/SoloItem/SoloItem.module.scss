@@ -6,7 +6,7 @@
   width: 100%;
   justify-items: center;
 
-  .item__buttonBack {
+  &__buttonBack {
     justify-self: start;
     display: block;
     position: relative;
@@ -48,25 +48,25 @@
     cursor: pointer;
   }
 
-  .item__img {
+  &__img {
     width: 100%;
     max-width: 300px;
   }
 
-  .item__name {
+  &__name {
     margin: 20px 0 0;
     padding: 0;
     font-size: 22px;
     color: $colorTitleItem;
   }
 
-  .item__price {
+  &__price {
     margin: 20px 0 0;
     padding: 0;
     font-size: 20px;
   }
 
-  .item__button {
+  &__button {
     display: inline-block;
     padding: 10px 35px;
     margin: 10px auto 0;
@@ -76,45 +76,45 @@
     border-radius: 8px;
     color: #fe6637;
     transition: .2s ease-in-out;
-  }
 
-  .item__button:before {
-    content: '';
-    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: -8px;
-    left: -75px;
-    transform: skewX(-45deg);
-  }
+    &:before {
+      content: '';
+      background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: -8px;
+      left: -75px;
+      transform: skewX(-45deg);
+    }
 
-  .item__button:hover {
-    background: #fe6637;
-    color: #fff;
-    cursor: pointer;
-  }
+    &:hover {
+      background: #fe6637;
+      color: #fff;
+      cursor: pointer;
+    }
 
-  .item__button:hover:before {
-    left: 150px;
-    transition: .5s ease-in-out;
-  }
+    &:hover:before {
+      left: 150px;
+      transition: .5s ease-in-out;
+    }
 
-  .item__button_disabled {
-    background: #fe6637;
-    color: #fff;
-  }
+    &_disabled {
+      background: #fe6637;
+      color: #fff;
 
-  .item__button_disabled::before {
-    background: transparent;
-  }
+      &::before {
+        background: transparent;
+      }
 
-  .item__button_disabled:hover {
-    cursor: default;
-  }
+      &:hover {
+        cursor: default;
+      }
 
-  .item__button_disabled:hover::before {
-    left: 0px;
-    transition: none;
+      &:hover::before {
+        left: 0px;
+        transition: none;
+      }
+    }
   }
 }
