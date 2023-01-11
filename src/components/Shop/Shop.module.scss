@@ -18,7 +18,7 @@
     @include media_930 {
       grid-template-columns: repeat(2, 1fr);
 
-      .linksList__item_plase_third {
+      &__item_plase_third {
         grid-column: 1 / 3;
         grid-row: 2 / 3;
       }
@@ -27,21 +27,21 @@
     @include media_440 {
       grid-template-columns: 1fr;
 
-      .linksList__item_plase_third {
+      &__item_plase_third {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
       }
     }
 
-    .linksList__item_place_stealth {
+    &__item_place_stealth {
       background-image: url(../../images/shop-boosted-steslth.png);
     }
 
-    .linksList__item_place_plus {
+    &__item_place_plus {
       background-image: url(../../images/shop-boosted-plus.png);
     }
 
-    .linksList__item_place_mini {
+    &__item_place_mini {
       background-image: url(../../images/shop-boosted-mini.png);
     }
   }

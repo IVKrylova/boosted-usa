@@ -13,6 +13,10 @@
     column-gap: 20px;
     justify-items: center;
 
+    @include media_1230 {
+      column-gap: 15px;
+    }
+
     @include media_740 {
       column-gap: 10px;
     }
@@ -22,21 +26,19 @@
       row-gap: 20px;
     }
 
-    .brandsList__item {
-      .brandsList__brand {
-        width: 280px;
+    &__brand {
+      width: 280px;
 
-        @include media_1200 {
-          width: 200px;
-        }
+      @include media_1200 {
+        width: 200px;
+      }
 
-        @include media_930 {
-          width: 150px;
-        }
+      @include media_930 {
+        width: 150px;
+      }
 
-        @include media_740 {
-          width: 120px;
-        }
+      @include media_740 {
+        width: 120px;
       }
     }
   }

@@ -1,32 +1,19 @@
 import { FC } from 'react';
+import Video from '../Video/Video';
 import styles from './Videos.module.scss';
 
 const Videos: FC = () => {
   return (
     <section className={styles.videos}>
       <ul className={styles.videosList}>
-        <li className={styles.videosList__item}>
-          <iframe
-            className={styles.videosList__video}
-            width='560'
-            height='315'
-            src='https://www.youtube.com/embed/JqyzwbpYYqc'
-            title='YouTube video player'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-          ></iframe>
-        </li>
-        <li className={styles.videosList__item}>
-          <iframe
-            className={styles.videosList__video}
-            width='560'
-            height='315'
-            src='https://www.youtube.com/embed/78bXV1ZqQWI'
-            title='YouTube video player'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-          ></iframe>
-        </li>
+        <Video
+          videoId='JqyzwbpYYqc'
+          name='Boosted Rev: The Tesla of Electric Scooters!'
+        />
+        <Video
+          videoId='78bXV1ZqQWI'
+          name='Introducing Boosted Rev'
+        />
       </ul>
     </section>
   );

@@ -17,16 +17,5 @@
       align-items: center;
       row-gap: 20px;
     }
-
-    .videosList__item {
-      .videosList__video {
-        border: none;
-
-        @include media_590 {
-          width: 300px;
-          height: auto;
-        }
-      }
-    }
   }
 }

@@ -31,7 +31,7 @@
       'navMenu navMenu navMenu';
   }
 
-  .header__message {
+  &__message {
     grid-area: message;
     background-color: $backgroundDark;
     color: #fbfbfb;
@@ -46,7 +46,7 @@
     box-sizing: border-box;
   }
 
-  .header__logo {
+  &__logo {
     grid-area: logo;
     justify-self: start;
     width: 160px;
@@ -68,7 +68,7 @@
     grid-area: navMenu;
     align-self: center;
 
-    .navMenu__list {
+    &__list {
       padding: 0;
       list-style-type: none;
       display: flex;
@@ -97,23 +97,21 @@
         display: none;
       }
 
-      .navMenu__item {
-        .navMenu__link {
-          color: $fontColorDark;
-          text-decoration: none;
-        }
-
-        .navMenu__link:hover {
-          @include hover;
-        }
+      &_visible {
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        margin-left: 15px;
       }
     }
 
-    .navMenu__list_visible {
-      display: flex;
-      flex-direction: column;
-      z-index: 10;
-      margin-left: 15px;
+    &__link {
+      color: $fontColorDark;
+      text-decoration: none;
+
+      &:hover {
+        @include hover;
+      }
     }
   }
 
@@ -128,10 +126,10 @@
     @include media_440 {
       margin: 0 0 5px 15px;
     }
-  }
 
-  .menuIcon:hover {
-    @include hover;
+    &:hover {
+      @include hover;
+    }
   }
 
   .account {
@@ -144,17 +142,17 @@
     display: flex;
     column-gap: 10px;
 
-    .account__link {
+    &__link {
       text-decoration: none;
       position: relative;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .5;
+      }
     }
 
-    .account__link:hover {
-      cursor: pointer;
-      opacity: .5;
-    }
-
-    .account__cartCount {
+    &__cartCount {
       margin: 0;
       padding: 0;
       color: $colorTitleItem;

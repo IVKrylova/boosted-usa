@@ -5,34 +5,34 @@
   display: grid;
   text-align: center;
 
-  .catalogItem__img {
+  &__img {
     width: 100%;
     max-width: 250px;
   }
 
-  .catalogItem__name {
+  &__name {
     margin: 10px 0 0;
     padding: 0;
     font-size: 22px;
   }
 
-  .catalogItem__link {
+  &__link {
     text-decoration: none;
     color: $colorTitleItem;
     font-weight: 400;
+
+    &:hover {
+      @include hover;
+    }
   }
 
-  .catalogItem__link:hover {
-    @include hover;
-  }
-
-  .catalogItem__price {
+  &__price {
     margin: 10px 0 0;
     padding: 0;
     font-size: 20px;
   }
 
-  .catalogItem__button {
+  &__button {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px auto 0;
@@ -42,45 +42,45 @@
     border-radius: 8px;
     color: #fe6637;
     transition: .2s ease-in-out;
-  }
 
-  .catalogItem__button::before {
-    content: '';
-    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: -8px;
-    left: -75px;
-    transform: skewX(-45deg);
-  }
+    &::before {
+      content: '';
+      background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: -8px;
+      left: -75px;
+      transform: skewX(-45deg);
+    }
 
-  .catalogItem__button:hover {
-    background: #fe6637;
-    color: #fff;
-    cursor: pointer;
-  }
+    &:hover {
+      background: #fe6637;
+      color: #fff;
+      cursor: pointer;
+    }
 
-  .catalogItem__button:hover::before {
-    left: 150px;
-    transition: .5s ease-in-out;
-  }
+    &:hover::before {
+      left: 150px;
+      transition: .5s ease-in-out;
+    }
 
-  .catalogItem__button_disabled {
-    background: #fe6637;
-    color: #fff;
-  }
+    &_disabled {
+      background: #fe6637;
+      color: #fff;
+    }
 
-  .catalogItem__button_disabled::before {
-    background: transparent;
-  }
+    &_disabled::before {
+      background: transparent;
+    }
 
-  .catalogItem__button_disabled:hover {
-    cursor: default;
-  }
+    &_disabled:hover {
+      cursor: default;
+    }
 
-  .catalogItem__button_disabled:hover::before {
-    left: 0px;
-    transition: none;
+    &_disabled:hover::before {
+      left: 0px;
+      transition: none;
+    }
   }
 }

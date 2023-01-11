@@ -30,7 +30,7 @@
       }
     }
 
-    .imagesList__image {
+    &__image {
       @include media_740 {
         width: 200px;
       }
